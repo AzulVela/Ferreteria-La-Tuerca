@@ -68,6 +68,9 @@ namespace TpLaTuerca.Presentación.Login
             this.CenterToParent();
         }
 
-        
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

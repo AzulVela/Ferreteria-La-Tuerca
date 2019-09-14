@@ -9,3 +9,14 @@ C:\Users\sebad\Documents\Facu\PAV\TP\TpLaTuerca\obj\Debug\TpLaTuerca.csproj.Gene
 C:\Users\sebad\Documents\Facu\PAV\TP\TpLaTuerca\obj\Debug\TpLaTuerca.csproj.CoreCompileInputs.cache
 C:\Users\sebad\Documents\Facu\PAV\TP\TpLaTuerca\obj\Debug\TpLaTuerca.exe
 C:\Users\sebad\Documents\Facu\PAV\TP\TpLaTuerca\obj\Debug\TpLaTuerca.pdb
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\obj\Debug\TpLaTuerca.csprojAssemblyReference.cache
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\obj\Debug\TpLaTuerca.frmPrincipal.resources
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\obj\Debug\TpLaTuerca.Presentación.Login.frmLogin.resources
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\obj\Debug\TpLaTuerca.Properties.Resources.resources
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\obj\Debug\TpLaTuerca.csproj.GenerateResource.cache
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\obj\Debug\TpLaTuerca.csproj.CoreCompileInputs.cache
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\obj\Debug\TpLaTuerca.exe
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\obj\Debug\TpLaTuerca.pdb
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\bin\Debug\TpLaTuerca.exe.config
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\bin\Debug\TpLaTuerca.exe
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\bin\Debug\TpLaTuerca.pdb
