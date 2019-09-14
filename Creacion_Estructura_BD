@@ -1,3 +1,6 @@
+create database tp_latuerca
+go
+
 USE [Tp_LaTuerca]
 GO
 /****** Object:  Table [dbo].[Cliente]    Script Date: 12-Sep-19 18:09:44 ******/
@@ -6,7 +9,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Cliente](
-	[CodCliente] [int] NOT NULL,
+	[CodCliente] [int] NOT NULL identity,
 	[Apellido] [varchar](20) NOT NULL,
 	[Nombre] [varchar](20) NOT NULL,
 	[Telefono] [varchar](30) NULL,
@@ -58,7 +61,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Factura](
-	[NroFactura] [int] NOT NULL,
+	[NroFactura] [int] NOT NULL identity,
 	[CodTipoFactura] [int] NOT NULL,
 	[CodCliente] [int] NOT NULL,
 	[CodTipoDocV] [int] NOT NULL,
@@ -77,29 +80,16 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Producto](
-	[CodProducto] [int] NOT NULL,
+	[CodProducto] [int] NOT NULL identity,
+	[Nombre] [varchar](50) NOT NULL,
 	[Descripcion] [varchar](50) NOT NULL,
 	[CodTipoMedida] [int] NOT NULL,
 	[Precio] [float] NULL,
 	[CodTipoUso] [int] NOT NULL,
+	[CodProveedor] [int] NOT NULL,
  CONSTRAINT [PK_Producto] PRIMARY KEY CLUSTERED 
 (
 	[CodProducto] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[ProductoPorProveedor]    Script Date: 12-Sep-19 18:09:44 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[ProductoPorProveedor](
-	[CodProducto] [int] NOT NULL,
-	[CodProveedor] [int] NOT NULL,
- CONSTRAINT [PK_ProductoPorProveedor] PRIMARY KEY CLUSTERED 
-(
-	[CodProducto] ASC,
-	[CodProveedor] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -109,13 +99,12 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Proveedor](
-	[CodProveedor] [int] NOT NULL,
+	[CodProveedor] [int] NOT NULL identity,
 	[Apellido] [varchar](20) NOT NULL,
 	[Nombre] [varchar](20) NOT NULL,
 	[Direccion] [varchar](50) NULL,
 	[Telefono] [varchar](30) NULL,
 	[TiempoDeEntrega] [int] NULL,
-	[Precio] [float] NULL,
  CONSTRAINT [PK_Proveedor] PRIMARY KEY CLUSTERED 
 (
 	[CodProveedor] ASC
@@ -128,7 +117,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Tipo_Doc](
-	[CodTipoDoc] [int] NOT NULL,
+	[CodTipoDoc] [int] NOT NULL identity,
 	[Nombre] [varchar](20) NOT NULL,
 	[Descripcion] [varchar](50) NULL,
  CONSTRAINT [PK_Tipo_Doc] PRIMARY KEY CLUSTERED 
@@ -143,9 +132,9 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Tipo_Factura](
-	[CodTipoFactura] [int] NOT NULL,
+	[CodTipoFactura] [int] NOT NULL identity,
 	[Nombre] [varchar](20) NULL,
-	[Descripcion] [varchar](20) NULL,
+	[Descripcion] [varchar](50) NULL,
  CONSTRAINT [PK_Tipo_Factura] PRIMARY KEY CLUSTERED 
 (
 	[CodTipoFactura] ASC
@@ -158,7 +147,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Tipo_Medida](
-	[CodTipoMedida] [int] NOT NULL,
+	[CodTipoMedida] [int] NOT NULL identity,
 	[Nombre] [varchar](30) NOT NULL,
 	[Descripcion] [varchar](50) NULL,
  CONSTRAINT [PK_Tipo_Medida] PRIMARY KEY CLUSTERED 
@@ -173,7 +162,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Tipo_Uso](
-	[CodTipoUso] [int] NOT NULL,
+	[CodTipoUso] [int] NOT NULL identity,
 	[Nombre] [varchar](30) NOT NULL,
 	[Descripcion] [varchar](50) NULL,
  CONSTRAINT [PK_Tipo_Uso] PRIMARY KEY CLUSTERED 
@@ -237,13 +226,63 @@ REFERENCES [dbo].[Tipo_Uso] ([CodTipoUso])
 GO
 ALTER TABLE [dbo].[Producto] CHECK CONSTRAINT [FK_Producto_Tipo_Uso]
 GO
-ALTER TABLE [dbo].[ProductoPorProveedor]  WITH CHECK ADD  CONSTRAINT [FK_ProductoPorProveedor_Producto] FOREIGN KEY([CodProducto])
-REFERENCES [dbo].[Producto] ([CodProducto])
-GO
-ALTER TABLE [dbo].[ProductoPorProveedor] CHECK CONSTRAINT [FK_ProductoPorProveedor_Producto]
-GO
 ALTER TABLE [dbo].[Vendedor]  WITH CHECK ADD  CONSTRAINT [FK_Vendedor_Tipo_Doc] FOREIGN KEY([CodTipoDoc])
 REFERENCES [dbo].[Tipo_Doc] ([CodTipoDoc])
 GO
 ALTER TABLE [dbo].[Vendedor] CHECK CONSTRAINT [FK_Vendedor_Tipo_Doc]
 GO
+ALTER TABLE [dbo].[Producto]  WITH CHECK ADD  CONSTRAINT [FK_Producto_Proveedor] FOREIGN KEY([CodProveedor])
+REFERENCES [dbo].[Proveedor] ([CodProveedor])
+GO
+ALTER TABLE [dbo].[Producto] CHECK CONSTRAINT [FK_Producto_Proveedor]
+GO
+
+insert into tipo_medida values
+('Metros','Medida de longitud'),
+('Metros cuadrados','Medida de superficie'),
+('Metros cúbicos','Medida de volúmen'),
+('Kg','Medida de masa'),
+('N/A','Herramental/Maquinaria');
+
+insert into tipo_uso values
+('General','Herramienta/insumo de propósito general'),
+('Albañilería','Herramienta/insumo de albañilería'),
+('Carpintería','Herramienta/insumo de carpintería');
+
+insert into proveedor values 
+('Ferro','Cons','Duarte Quiroz 621','351-2293485',30),
+('Zara','Te','Av. Colón 829','351-2397372',15),
+('Falco','Hnos.','Acuña 81','3571-648292',20);
+
+insert into producto values 
+('Amoladora','Herramienta',5,3000,1,1),
+('Hormigonera','Maquinaria albañilería',5,10000,2,1),
+('Clavo corto','Clavo 4cm',4,240,1,1),
+('Clavo largo','Clavo 7cm',4,400,1,1),
+('Placa Madera','Insumo de carpintería',2,500,3,1),
+('Tornillo','Insumo general',1,0.60,1,1),
+('Tuerca','Insumo general',1,0.40,1,1);
+
+insert into tipo_factura values 
+('A','Emitida por RI a RI'),
+('B','Emitida por RI a CF'),
+('C','Emitida por monotributista');
+
+insert into cliente values 
+('Pérez','Juan','351-1231292','30-72098763-6'),
+('Pito','Elsa','351-4921292','30-72093243-2'),
+('Flores del Campo','Zacarías','351-1242292','30-62028421-6'),
+('Lancha','Chin Chu','351-5124286','30-72839637-3');
+
+go
+
+insert into tipo_doc values
+('DNI','Documento Nacional de Identidad'),
+('LE','Libreta de Enrolamiento'),
+('CI','Cédula de Identidad');
+
+insert into vendedor values 
+(1,36975628,convert(datetime,'16/02/1995',103),convert(datetime,'05/03/1975',103),'Gaona Lugo','Orlando','351-2852890');
+
+
+
