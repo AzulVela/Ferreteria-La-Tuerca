@@ -45,13 +45,13 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Estructura](
-	[IdProdNivelSuperior] [int] NOT NULL,
-	[IdProdNivelInferior] [int] NOT NULL,
+	[IdPSuperior] [int] NOT NULL,
+	[IdPInferior] [int] NOT NULL,
 	[Cantidad] [int] NULL,
  CONSTRAINT [PK_Estructura] PRIMARY KEY CLUSTERED 
 (
-	[IdProdNivelSuperior] ASC,
-	[IdProdNivelInferior] ASC
+	[IdPSuperior] ASC,
+	[IdPInferior] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -81,8 +81,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Producto](
 	[CodProducto] [int] NOT NULL identity,
-	[Nombre] [varchar](50) NOT NULL,
-	[Descripcion] [varchar](50) NOT NULL,
+	[Nombre] [varchar](20) NOT NULL,
+	[Descripcion] [varchar](30) NOT NULL,
 	[CodTipoMedida] [int] NOT NULL,
 	[Precio] [float] NULL,
 	[CodTipoUso] [int] NOT NULL,
@@ -101,7 +101,7 @@ GO
 CREATE TABLE [dbo].[Proveedor](
 	[CodProveedor] [int] NOT NULL identity,
 	[Apellido] [varchar](20) NOT NULL,
-	[Nombre] [varchar](20) NOT NULL,
+	[Nombre] [varchar](20) NULL,
 	[Direccion] [varchar](50) NULL,
 	[Telefono] [varchar](30) NULL,
 	[TiempoDeEntrega] [int] NULL,
@@ -164,7 +164,7 @@ GO
 CREATE TABLE [dbo].[Tipo_Uso](
 	[CodTipoUso] [int] NOT NULL identity,
 	[Nombre] [varchar](30) NOT NULL,
-	[Descripcion] [varchar](50) NULL,
+	[Descripcion] [varchar](100) NULL,
  CONSTRAINT [PK_Tipo_Uso] PRIMARY KEY CLUSTERED 
 (
 	[CodTipoUso] ASC
@@ -196,12 +196,12 @@ REFERENCES [dbo].[Factura] ([NroFactura], [CodTipoFactura])
 GO
 ALTER TABLE [dbo].[Detalle_Factura] CHECK CONSTRAINT [FK_Detalle_Factura_Factura]
 GO
-ALTER TABLE [dbo].[Estructura]  WITH CHECK ADD  CONSTRAINT [FK_Estructura_Producto_Inferior] FOREIGN KEY([IdProdNivelInferior])
+ALTER TABLE [dbo].[Estructura]  WITH CHECK ADD  CONSTRAINT [FK_Estructura_Producto_Inferior] FOREIGN KEY([IdPInferior])
 REFERENCES [dbo].[Producto] ([CodProducto])
 GO
 ALTER TABLE [dbo].[Estructura] CHECK CONSTRAINT [FK_Estructura_Producto_Inferior]
 GO
-ALTER TABLE [dbo].[Estructura]  WITH CHECK ADD  CONSTRAINT [FK_Estructura_Producto_Superior] FOREIGN KEY([IdProdNivelSuperior])
+ALTER TABLE [dbo].[Estructura]  WITH CHECK ADD  CONSTRAINT [FK_Estructura_Producto_Superior] FOREIGN KEY([IdPSuperior])
 REFERENCES [dbo].[Producto] ([CodProducto])
 GO
 ALTER TABLE [dbo].[Estructura] CHECK CONSTRAINT [FK_Estructura_Producto_Superior]
@@ -237,31 +237,56 @@ GO
 ALTER TABLE [dbo].[Producto] CHECK CONSTRAINT [FK_Producto_Proveedor]
 GO
 
+create table usuarios
+(idUsuario int primary key identity,
+nombreUsuario varchar(50) not null,
+password varchar(50) not null);
+
+go
+
+insert into usuarios values
+('AVela','75865'),
+('SDemasi','76726'),
+('EVera','78198'),
+('TBonanzea','72087');
+
 insert into tipo_medida values
 ('Metros','Medida de longitud'),
 ('Metros cuadrados','Medida de superficie'),
 ('Metros cúbicos','Medida de volúmen'),
 ('Kg','Medida de masa'),
-('N/A','Herramental/Maquinaria');
+('N/A','Herramental/Maquinaria'),
+('Unidad','Producto/insumo por unidad');
 
 insert into tipo_uso values
 ('General','Herramienta/insumo de propósito general'),
 ('Albañilería','Herramienta/insumo de albañilería'),
-('Carpintería','Herramienta/insumo de carpintería');
+('Carpintería','Herramienta/insumo de carpintería'),
+('Producto terminado','Producto fabricado por la ferretería con insumos propios');
 
 insert into proveedor values 
 ('Ferro','Cons','Duarte Quiroz 621','351-2293485',30),
 ('Zara','Te','Av. Colón 829','351-2397372',15),
-('Falco','Hnos.','Acuña 81','3571-648292',20);
+('Falco','Hnos.','Acuña 81','3571-648292',20),
+('Fabricación propia',null,null,null,null);
+
 
 insert into producto values 
 ('Amoladora','Herramienta',5,3000,1,1),
-('Hormigonera','Maquinaria albañilería',5,10000,2,1),
-('Clavo corto','Clavo 4cm',4,240,1,1),
-('Clavo largo','Clavo 7cm',4,400,1,1),
-('Placa Madera','Insumo de carpintería',2,500,3,1),
+('Hormigonera','Maquinaria albañilería',5,10000,2,2),
+('Clavo corto','Clavo 4cm',6,0.24,1,3),
+('Clavo largo','Clavo 7cm',6,0.40,1,3),
+('Placa Madera','Insumo de carpintería',2,500,3,2),
 ('Tornillo','Insumo general',1,0.60,1,1),
-('Tuerca','Insumo general',1,0.40,1,1);
+('Tuerca','Insumo general',1,0.40,1,3),
+('Mesa','Mesa por m2',2,2000,4,4);
+
+insert into estructura values
+(8,5,2),
+(8,3,20),
+(8,4,20),
+(8,6,8),
+(8,7,8);
 
 insert into tipo_factura values 
 ('A','Emitida por RI a RI'),
@@ -282,7 +307,25 @@ insert into tipo_doc values
 ('CI','Cédula de Identidad');
 
 insert into vendedor values 
-(1,36975628,convert(datetime,'16/02/1995',103),convert(datetime,'05/03/1975',103),'Gaona Lugo','Orlando','351-2852890');
+(1,36975628,convert(datetime,'16/02/1995',103),convert(datetime,'05/03/1975',103),'Gaona Lugo','Orlando','351-2852890'),
+(1,38976271,convert(datetime,'01/12/1988',103),convert(datetime,'15/02/1996',103),'Mac Allister','Alexis','351-8273615'),
+(2,29665267,convert(datetime,'11/11/1960',103),convert(datetime,'25/10/1980',103),'Andrada','Esteban','351-2773025');
+
+insert into factura values
+(1,2,1,36975628,convert(datetime,'16/02/2019',103)),
+(1,3,1,38976271,convert(datetime,'1/03/2019',103)),
+(2,1,2,29665267,convert(datetime,'1/03/2019',103)); 
+go
+
+insert into detalle_factura values
+(1,1,1,2,3000),
+(1,1,2,1,10000),
+(2,1,3,100,24),
+(2,1,5,3,1500),
+(3,2,8,1,2000);
+
+
+
 
 
 
