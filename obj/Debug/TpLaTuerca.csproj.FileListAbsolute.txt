@@ -20,3 +20,35 @@ C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\obj\Debug\TpLaTuerca.p
 C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\bin\Debug\TpLaTuerca.exe.config
 C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\bin\Debug\TpLaTuerca.exe
 C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\bin\Debug\TpLaTuerca.pdb
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\bin\Debug\TpLaTuerca.exe.config
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\bin\Debug\TpLaTuerca.exe
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\bin\Debug\TpLaTuerca.pdb
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\obj\Debug\TpLaTuerca.Presentación.Clientes.frmABMCliente.resources
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\obj\Debug\TpLaTuerca.Presentación.Cliente.frmClientes.resources
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\obj\Debug\TpLaTuerca.frmPrincipal.resources
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\obj\Debug\TpLaTuerca.Presentación.Login.frmLogin.resources
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\obj\Debug\TpLaTuerca.Presentacion.Productos.frmDetalleProducto.resources
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\obj\Debug\TpLaTuerca.Presentación.Proveedor.frmABMProveedor.resources
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\obj\Debug\TpLaTuerca.Properties.Resources.resources
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\obj\Debug\TpLaTuerca.csproj.GenerateResource.cache
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\obj\Debug\TpLaTuerca.csproj.CoreCompileInputs.cache
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\obj\Debug\TpLaTuerca.exe
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\obj\Debug\TpLaTuerca.pdb
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\obj\Debug\TpLaTuerca.Presentacion.Productos.frmProductos.resources
+D:\Usuario\Escritorio\PAV I AZUL\Ferreteria-La-Tuerca-master2\obj\Debug\TpLaTuerca.Presentación.Proveedor.frmProveedores.resources
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\bin\Debug\TpLaTuerca.exe.config
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\obj\Debug\TpLaTuerca.exe
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\obj\Debug\TpLaTuerca.pdb
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\bin\Debug\TpLaTuerca.exe
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\bin\Debug\TpLaTuerca.pdb
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\obj\Debug\TpLaTuerca.csprojResolveAssemblyReference.cache
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\obj\Debug\TpLaTuerca.Presentación.Clientes.frmABMCliente.resources
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\obj\Debug\TpLaTuerca.Presentación.Cliente.frmClientes.resources
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\obj\Debug\TpLaTuerca.frmPrincipal.resources
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\obj\Debug\TpLaTuerca.Presentación.Login.frmLogin.resources
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\obj\Debug\TpLaTuerca.Presentacion.Productos.frmDetalleProducto.resources
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\obj\Debug\TpLaTuerca.Presentacion.Productos.frmProductos.resources
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\obj\Debug\TpLaTuerca.Presentación.Proveedor.frmABMProveedor.resources
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\obj\Debug\TpLaTuerca.Presentación.Proveedor.frmProveedores.resources
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\obj\Debug\TpLaTuerca.Properties.Resources.resources
+C:\Users\Ernesto\Desktop\SSL TEORICO\Ferreteria-La-Tuerca-azul\obj\Debug\TpLaTuerca.csproj.GenerateResource.Cache

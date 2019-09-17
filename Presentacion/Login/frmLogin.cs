@@ -72,5 +72,23 @@ namespace TpLaTuerca.Presentación.Login
         {
             Environment.Exit(0);
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblfecha.Text ="Fecha: " + DateTime.Now.ToShortDateString();
+            lblhora.Text = "Hora: " + DateTime.Now.ToString("HH:mm");
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

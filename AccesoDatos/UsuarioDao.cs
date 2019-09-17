@@ -14,11 +14,11 @@ namespace TpLaTuerca.AccesoDatos
         {
             {
                 //Construimos la consulta sql para buscar el usuario en la base de datos.
-                String strSql = string.Concat(" SELECT idUsuario, ",
-                                              "        nombreUsuario, ",
+                String strSql = string.Concat(" SELECT id_usuario, ",
+                                              "        nombre_usuario, ",
                                               "        password ",
                                               "   FROM Usuarios",
-                                              "  WHERE nombreUsuario =  @usuario");
+                                              "  WHERE nombre_usuario =  @usuario");
 
                 var parametros = new Dictionary<string, object>();
                 parametros.Add("usuario", nombreUsuario);
@@ -44,8 +44,8 @@ namespace TpLaTuerca.AccesoDatos
         {
             Usuario oUsuario = new Usuario
             {
-                IdUsuario = Convert.ToInt32(row["idUsuario"].ToString()),
-                NombreUsuario = row["nombreUsuario"].ToString(),
+                IdUsuario = Convert.ToInt32(row["id_usuario"].ToString()),
+                NombreUsuario = row["nombre_usuario"].ToString(),
                 Password = row.Table.Columns.Contains("password") ? row["password"].ToString() : null,
 
             };
