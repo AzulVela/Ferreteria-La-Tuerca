@@ -47,9 +47,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccesoDatos\ClienteDao.cs" />
     <Compile Include="AccesoDatos\DBHelper.cs" />
     <Compile Include="AccesoDatos\UsuarioDao.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\DetalleFactura.cs" />
+    <Compile Include="Entidades\Estructura.cs" />
+    <Compile Include="Entidades\Factura.cs" />
+    <Compile Include="Entidades\Producto.cs" />
+    <Compile Include="Entidades\Proveedor.cs" />
+    <Compile Include="Entidades\TipoDoc.cs" />
+    <Compile Include="Entidades\TipoFactura.cs" />
+    <Compile Include="Entidades\TipoMedida.cs" />
+    <Compile Include="Entidades\TipoUso.cs" />
     <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Entidades\Vendedor.cs" />
+    <Compile Include="LogicaNegocio\ClienteService.cs" />
     <Compile Include="LogicaNegocio\UsuarioService.cs" />
     <Compile Include="Presentacion\Clientes\frmABMCliente.cs">
       <SubType>Form</SubType>
