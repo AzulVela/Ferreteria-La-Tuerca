@@ -80,8 +80,8 @@ namespace TpLaTuerca.Presentación.Login
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblfecha.Text ="Fecha: " + DateTime.Now.ToShortDateString();
-            lblhora.Text = "Hora: " + DateTime.Now.ToString("HH:mm");
+            lblfecha.Text = DateTime.Now.ToShortDateString();
+            lblhora.Text =  DateTime.Now.ToString("HH:mm") + " - ";
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -89,6 +89,9 @@ namespace TpLaTuerca.Presentación.Login
 
         }
 
+        private void Lblhora_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

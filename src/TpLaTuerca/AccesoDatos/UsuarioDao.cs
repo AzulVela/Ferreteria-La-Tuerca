@@ -35,7 +35,18 @@ namespace TpLaTuerca.AccesoDatos
 
         internal IList<Usuario> GetAll()
         {
-            throw new NotImplementedException();
+            List<Usuario> listaUsuario = new List<Usuario>();
+
+            String sql = "select idUsuario, nombreUsuario, password from usuarios";
+
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(sql);
+
+            foreach (DataRow row in resultado.Rows)
+            {
+                listaUsuario.Add(ObjectMapping(row));
+            }
+
+            return listaUsuario;
         }
 
         private Usuario ObjectMapping(DataRow row)

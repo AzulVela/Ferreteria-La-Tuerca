@@ -30,5 +30,10 @@ namespace TpLaTuerca.LogicaNegocio
         {
             return oClienteDao.GetAll();
         }
+
+        internal object ConsultarConFiltros()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
