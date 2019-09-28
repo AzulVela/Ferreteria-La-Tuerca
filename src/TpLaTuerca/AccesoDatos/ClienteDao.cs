@@ -30,7 +30,7 @@ namespace TpLaTuerca.AccesoDatos
         {
             List<Cliente> listaCliente = new List<Cliente>();
 
-            String sql = "select codcliente, Apellido, nombre, telefono, cuit from cliente";
+            String sql = "select codcliente, Apellido, nombre, telefono, cuit from cliente where estado = 's'";
 
             var resultado = DBHelper.GetDBHelper().ConsultaSQL(sql);
 
@@ -40,6 +40,28 @@ namespace TpLaTuerca.AccesoDatos
             }
 
             return listaCliente;
+        }
+
+        internal bool ChangeStateClient(Cliente oClienteSelected)
+        {
+            String sql = "update cliente set estado = 'n' where codcliente = @codcliente";
+            var prs = new Dictionary<string, object>();
+            prs.Add("codcliente", oClienteSelected.CodCliente);
+
+            return DBHelper.GetDBHelper().EjecutarSQL(sql, prs) == 1;
+        }
+
+        internal bool UpdateClient(Cliente oClienteSelected)
+        {
+            String sql = "update cliente set apellido = @apellido, nombre = @nombre, telefono = @telefono, cuit = @cuit where codcliente = @codcliente";
+            var prs = new Dictionary<string, object>();
+            prs.Add("apellido", oClienteSelected.Apellido);
+            prs.Add("codcliente", oClienteSelected.CodCliente);
+            prs.Add("nombre", oClienteSelected.Nombre);
+            prs.Add("telefono", oClienteSelected.Telefono);
+            prs.Add("cuit", oClienteSelected.CUIT);
+
+            return DBHelper.GetDBHelper().EjecutarSQL(sql, prs) == 1;
         }
 
         internal bool Create(Cliente oCliente)

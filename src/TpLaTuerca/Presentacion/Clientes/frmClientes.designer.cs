@@ -34,13 +34,13 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkTodos = new System.Windows.Forms.CheckBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.chkTodos = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
@@ -101,6 +101,17 @@
             this.groupBox1.Text = "Buscar";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // chkTodos
+            // 
+            this.chkTodos.AutoSize = true;
+            this.chkTodos.Location = new System.Drawing.Point(140, 155);
+            this.chkTodos.Name = "chkTodos";
+            this.chkTodos.Size = new System.Drawing.Size(79, 24);
+            this.chkTodos.TabIndex = 10;
+            this.chkTodos.Text = "Todos";
+            this.chkTodos.UseVisualStyleBackColor = true;
+            this.chkTodos.CheckedChanged += new System.EventHandler(this.ChkTodos_CheckedChanged);
+            // 
             // btnConsultar
             // 
             this.btnConsultar.Location = new System.Drawing.Point(498, 140);
@@ -144,6 +155,7 @@
             this.btnActualizar.TabIndex = 6;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // btnEliminar
             // 
@@ -154,6 +166,7 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnSalir
             // 
@@ -165,16 +178,6 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
-            // chkTodos
-            // 
-            this.chkTodos.AutoSize = true;
-            this.chkTodos.Location = new System.Drawing.Point(140, 155);
-            this.chkTodos.Name = "chkTodos";
-            this.chkTodos.Size = new System.Drawing.Size(79, 24);
-            this.chkTodos.TabIndex = 10;
-            this.chkTodos.Text = "Todos";
-            this.chkTodos.UseVisualStyleBackColor = true;
             // 
             // frmClientes
             // 

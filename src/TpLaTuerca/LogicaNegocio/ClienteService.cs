@@ -30,5 +30,15 @@ namespace TpLaTuerca.LogicaNegocio
         {
             return oClienteDao.GetAll();
         }
+
+        internal bool ActualizarCliente(Cliente oClienteSelected)
+        {
+            return oClienteDao.UpdateClient(oClienteSelected);
+        }
+
+        internal bool ModificarEstadoCliente(Cliente oClienteSelected)
+        {
+            return oClienteDao.ChangeStateClient(oClienteSelected);
+        }
     }
 }

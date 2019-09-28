@@ -68,5 +68,33 @@ namespace TpLaTuerca.Presentación.Cliente
         {
 
         }
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            frmABMCliente formulario = new frmABMCliente();
+            var cliente = (Entidades.Cliente)dgvClientes.CurrentRow.DataBoundItem;
+            formulario.InicializarFormulario(frmABMCliente.FormMode.update, cliente);
+            formulario.ShowDialog();
+        }
+
+        private void ChkTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkTodos.Checked)
+            {
+                txtApellido.Enabled = false;
+                txtNombre.Enabled = false;
+            }
+            else
+                txtApellido.Enabled = true;
+                txtNombre.Enabled = true;
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            frmABMCliente formulario = new frmABMCliente();
+            var cliente = (Entidades.Cliente)dgvClientes.CurrentRow.DataBoundItem;
+            formulario.InicializarFormulario(frmABMCliente.FormMode.delete, cliente);
+            formulario.ShowDialog();
+        }
     }
 }

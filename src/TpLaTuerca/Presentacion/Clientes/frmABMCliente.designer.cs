@@ -98,7 +98,7 @@
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(288, 26);
-            this.txtTelefono.TabIndex = 5;
+            this.txtTelefono.TabIndex = 3;
             // 
             // txtNombre
             // 
@@ -106,7 +106,7 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(288, 26);
-            this.txtNombre.TabIndex = 6;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtApellido
             // 
@@ -114,7 +114,7 @@
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(288, 26);
-            this.txtApellido.TabIndex = 7;
+            this.txtApellido.TabIndex = 2;
             // 
             // btnAceptar
             // 
@@ -122,7 +122,7 @@
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(112, 35);
-            this.btnAceptar.TabIndex = 8;
+            this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
@@ -133,7 +133,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(112, 35);
-            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);

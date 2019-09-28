@@ -134,6 +134,43 @@ namespace TpLaTuerca.Presentación.Clientes
                             MessageBox.Show("CUIT existente. Usted ya se encuentra registrado","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     }
+
+                case FormMode.update:
+                    {
+                            if (ValidarCampos())
+                            {
+                                oClienteSelected.Nombre = txtNombre.Text;
+                                oClienteSelected.Apellido = txtApellido.Text;
+                                oClienteSelected.Telefono = txtTelefono.Text;
+                                oClienteSelected.CUIT = txtCuit.Text;
+
+                                if (oClienteService.ActualizarCliente(oClienteSelected))
+                                {
+                                    MessageBox.Show("Cliente actualizado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Dispose();
+                                }
+
+                                else
+                                    MessageBox.Show("Error al actualizar el cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            break;
+                    }
+
+                case FormMode.delete:
+                    {
+                        if (MessageBox.Show("¿Seguro que desea deshabilitar al cliente seleccionado?","Aviso",MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.OK)
+                        {
+                            if (oClienteService.ModificarEstadoCliente(oClienteSelected))
+                            {
+                                MessageBox.Show("Cliente dehabilitado con éxito", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            else
+                                MessageBox.Show("Error al deshabilitar el cliente","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        }
+                        break;
+                    }
+
             }
 
         }
