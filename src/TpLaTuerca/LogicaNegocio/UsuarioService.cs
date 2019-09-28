@@ -17,7 +17,7 @@ namespace TpLaTuerca.LogicaNegocio
         }
         public IList<Usuario> ObtenerTodos()
         {
-            return oUsuarioDao.GetAll(); //no implementado
+            return oUsuarioDao.GetAll();
         }
 
         public Usuario ValidarUsuario(string usuario, string password)
@@ -31,6 +31,11 @@ namespace TpLaTuerca.LogicaNegocio
                 }
             }
             return null;
+        }
+
+        internal object ConsultarConFiltros(Dictionary<string, object> filtros)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -31,6 +31,7 @@ namespace TpLaTuerca.LogicaNegocio
             return oClienteDao.GetAll();
         }
 
+<<<<<<< HEAD
         internal bool ActualizarCliente(Cliente oClienteSelected)
         {
             return oClienteDao.UpdateClient(oClienteSelected);
@@ -39,6 +40,11 @@ namespace TpLaTuerca.LogicaNegocio
         internal bool ModificarEstadoCliente(Cliente oClienteSelected)
         {
             return oClienteDao.ChangeStateClient(oClienteSelected);
+=======
+        internal object ConsultarConFiltros()
+        {
+            throw new NotImplementedException();
+>>>>>>> 39839aa15320fd53e0929e58035cc876c333286b
         }
     }
 }

@@ -37,7 +37,6 @@
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblfecha = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.lblhora = new System.Windows.Forms.Label();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
@@ -45,9 +44,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(106, 174);
+            this.label1.Location = new System.Drawing.Point(57, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 20);
+            this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario:";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
@@ -55,32 +55,36 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(106, 220);
+            this.label2.Location = new System.Drawing.Point(39, 85);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 20);
+            this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Contraseña:";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(208, 168);
+            this.txtUsuario.Location = new System.Drawing.Point(118, 46);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(242, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(163, 20);
             this.txtUsuario.TabIndex = 2;
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(208, 214);
+            this.txtContraseña.Location = new System.Drawing.Point(118, 78);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(242, 26);
+            this.txtContraseña.Size = new System.Drawing.Size(163, 20);
             this.txtContraseña.TabIndex = 3;
             this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(111, 318);
+            this.btnIngresar.Location = new System.Drawing.Point(118, 124);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(110, 38);
+            this.btnIngresar.Size = new System.Drawing.Size(73, 25);
             this.btnIngresar.TabIndex = 4;
             this.btnIngresar.Text = "&Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
@@ -88,9 +92,10 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(399, 320);
+            this.btnCancelar.Location = new System.Drawing.Point(208, 125);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(110, 37);
+            this.btnCancelar.Size = new System.Drawing.Size(73, 24);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -99,34 +104,22 @@
             // lblfecha
             // 
             this.lblfecha.AutoSize = true;
-            this.lblfecha.Location = new System.Drawing.Point(498, 28);
-            this.lblfecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblfecha.Location = new System.Drawing.Point(260, 7);
             this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(51, 20);
+            this.lblfecha.Size = new System.Drawing.Size(35, 13);
             this.lblfecha.TabIndex = 6;
             this.lblfecha.Text = "label3";
             this.lblfecha.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(44, 95);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 20);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Ingrese usuario y contraseña.";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
             // lblhora
             // 
             this.lblhora.AutoSize = true;
-            this.lblhora.Location = new System.Drawing.Point(498, 65);
-            this.lblhora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblhora.Location = new System.Drawing.Point(220, 7);
             this.lblhora.Name = "lblhora";
-            this.lblhora.Size = new System.Drawing.Size(51, 20);
+            this.lblhora.Size = new System.Drawing.Size(35, 13);
             this.lblhora.TabIndex = 8;
             this.lblhora.Text = "label5";
+            this.lblhora.Click += new System.EventHandler(this.Lblhora_Click);
             // 
             // horafecha
             // 
@@ -135,11 +128,10 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 400);
+            this.ClientSize = new System.Drawing.Size(346, 165);
             this.Controls.Add(this.lblhora);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblfecha);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnIngresar);
@@ -148,6 +140,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.Text = "Inicio De Sesión";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
@@ -165,7 +158,6 @@
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblfecha;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblhora;
         private System.Windows.Forms.Timer horafecha;
     }

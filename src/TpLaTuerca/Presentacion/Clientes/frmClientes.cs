@@ -56,6 +56,20 @@ namespace TpLaTuerca.Presentación.Cliente
 
             if (!chkTodos.Checked)
             {
+                if (txtNombre.Text != string.Empty)
+                {
+                    filtros.Add("Nombre", txtNombre.Text);
+                }
+
+                if (txtApellido.Text != string.Empty)
+                {
+                    filtros.Add("Apellido", txtApellido.Text);
+                }
+
+                if (filtros.Count > 0)
+                    dgvClientes.DataSource = oClienteService.ConsultarConFiltros(); //No implementado
+                else
+                    MessageBox.Show("Se debe ingresar al menos un criterio de búsqueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
 

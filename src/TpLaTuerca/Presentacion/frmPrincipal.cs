@@ -11,7 +11,7 @@ using TpLaTuerca.Presentación.Proveedor;
 using TpLaTuerca.Presentacion.Productos;
 using TpLaTuerca.Presentación.Cliente;
 using TpLaTuerca.Presentación.Login;
-
+using TpLaTuerca.Presentacion.Usuarios;
 
 namespace TpLaTuerca
 {
@@ -51,6 +51,30 @@ namespace TpLaTuerca
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult rpta;
+            rpta = MessageBox.Show("¿Seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rpta == DialogResult.No)
+                e.Cancel = true;
+        }
+
+        private void DToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SalirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuarios usuario = new frmUsuarios();
+            usuario.Show();
         }
     }
 }

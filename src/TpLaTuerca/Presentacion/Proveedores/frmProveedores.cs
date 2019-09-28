@@ -31,5 +31,10 @@ namespace TpLaTuerca.Presentación.Proveedor
         {
             this.Close();
         }
+
+        private void BtnConsultar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
