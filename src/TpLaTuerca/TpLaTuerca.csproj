@@ -114,11 +114,11 @@
     <Compile Include="Presentacion\Proveedores\frmProveedores.designer.cs">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Usuarios\frmABMUsuarios.cs">
+    <Compile Include="Presentacion\Usuarios\frmABMUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Usuarios\frmABMUsuarios.Designer.cs">
-      <DependentUpon>frmABMUsuarios.cs</DependentUpon>
+    <Compile Include="Presentacion\Usuarios\frmABMUsuario.Designer.cs">
+      <DependentUpon>frmABMUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Usuarios\frmUsuarios.cs">
       <SubType>Form</SubType>
@@ -152,8 +152,8 @@
     <EmbeddedResource Include="Presentacion\Proveedores\frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Usuarios\frmABMUsuarios.resx">
-      <DependentUpon>frmABMUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Usuarios\frmABMUsuario.resx">
+      <DependentUpon>frmABMUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Usuarios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>

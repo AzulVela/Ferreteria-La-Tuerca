@@ -22,16 +22,6 @@ namespace TpLaTuerca.Presentación.Cliente
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -46,8 +36,7 @@ namespace TpLaTuerca.Presentación.Cliente
         {
             frmABMCliente formulario = new frmABMCliente();
             formulario.ShowDialog();
-            
-
+            BtnConsultar_Click(sender, e);
         }
 
         private void BtnConsultar_Click(object sender, EventArgs e)
@@ -67,7 +56,7 @@ namespace TpLaTuerca.Presentación.Cliente
                 }
 
                 if (filtros.Count > 0)
-                    dgvClientes.DataSource = oClienteService.ConsultarConFiltros(); //No implementado
+                    dgvClientes.DataSource = oClienteService.ConsultarConFiltros(filtros);
                 else
                     MessageBox.Show("Se debe ingresar al menos un criterio de búsqueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
@@ -78,17 +67,13 @@ namespace TpLaTuerca.Presentación.Cliente
             
         }
 
-        private void DgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
             frmABMCliente formulario = new frmABMCliente();
             var cliente = (Entidades.Cliente)dgvClientes.CurrentRow.DataBoundItem;
             formulario.InicializarFormulario(frmABMCliente.FormMode.update, cliente);
             formulario.ShowDialog();
+            BtnConsultar_Click(sender, e);
         }
 
         private void ChkTodos_CheckedChanged(object sender, EventArgs e)
@@ -109,6 +94,7 @@ namespace TpLaTuerca.Presentación.Cliente
             var cliente = (Entidades.Cliente)dgvClientes.CurrentRow.DataBoundItem;
             formulario.InicializarFormulario(frmABMCliente.FormMode.delete, cliente);
             formulario.ShowDialog();
+            BtnConsultar_Click(sender, e);
         }
     }
 }

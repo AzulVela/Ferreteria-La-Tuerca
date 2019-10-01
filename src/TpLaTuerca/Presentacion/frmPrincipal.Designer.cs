@@ -33,12 +33,13 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.soporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnProveedor = new System.Windows.Forms.Button();
             this.btnProducto = new System.Windows.Forms.Button();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +70,13 @@
             this.archioToolStripMenuItem.Size = new System.Drawing.Size(60, 22);
             this.archioToolStripMenuItem.Text = "Archivo";
             // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
+            // 
             // soporteToolStripMenuItem
             // 
             this.soporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -76,6 +84,13 @@
             this.soporteToolStripMenuItem.Name = "soporteToolStripMenuItem";
             this.soporteToolStripMenuItem.Size = new System.Drawing.Size(60, 22);
             this.soporteToolStripMenuItem.Text = "Soporte";
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.UsuariosToolStripMenuItem_Click);
             // 
             // btnCliente
             // 
@@ -116,19 +131,10 @@
             this.btnProducto.UseVisualStyleBackColor = true;
             this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
-            // salirToolStripMenuItem
+            // contextMenuStrip2
             // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.UsuariosToolStripMenuItem_Click);
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
             // frmPrincipal
             // 
@@ -141,7 +147,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPrincipal";
             this.Text = "La Tuerca";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrincipal_FormClosing);
@@ -164,6 +170,7 @@
         private System.Windows.Forms.Button btnProducto;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
     }
 }
 

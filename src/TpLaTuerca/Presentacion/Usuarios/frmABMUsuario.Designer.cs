@@ -1,6 +1,6 @@
 ﻿namespace TpLaTuerca.Presentacion.Usuarios
 {
-    partial class frmABMUsuarios
+    partial class frmABMUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -57,6 +57,7 @@
             this.btnAceptar.TabIndex = 33;
             this.btnAceptar.Text = "&Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // Label4
             // 
@@ -124,7 +125,7 @@
             this.txtNombre.Size = new System.Drawing.Size(192, 20);
             this.txtNombre.TabIndex = 27;
             // 
-            // frmABMUsuarios
+            // frmABMUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,8 +140,9 @@
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.txtNombre);
-            this.Name = "frmABMUsuarios";
+            this.Name = "frmABMUsuario";
             this.Text = "frmABMUsuarios";
+            this.Load += new System.EventHandler(this.FrmABMUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

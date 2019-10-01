@@ -42,6 +42,30 @@ namespace TpLaTuerca.AccesoDatos
             return listaCliente;
         }
 
+        public IList<Cliente> GetByFilters(Dictionary<string, object> parametros)
+        {
+            List<Cliente> lst = new List<Cliente>();
+
+            String sql = "SELECT * FROM cliente where estado = 's'";
+
+            if (parametros.ContainsKey("Nombre"))
+            {
+                sql += "AND (Nombre LIKE @Nombre)";
+            }
+
+            if (parametros.ContainsKey("Apellido"))
+            {
+                sql += "AND (Apellido LIKE @Apellido)";
+            }
+
+            var resultado = DBHelper.GetDBHelper().ConsultaSQLConParametros(sql, parametros);
+
+            foreach (DataRow row in resultado.Rows)
+                lst.Add(ObjectMapping(row));
+
+            return lst;
+        }
+
         internal bool ChangeStateClient(Cliente oClienteSelected)
         {
             String sql = "update cliente set estado = 'n' where codcliente = @codcliente";

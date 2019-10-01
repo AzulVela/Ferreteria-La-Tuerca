@@ -1,4 +1,4 @@
-create database tp_latuerca
+﻿create database tp_latuerca
 go
 
 USE [Tp_LaTuerca]
@@ -243,15 +243,17 @@ GO
 create table usuarios
 (idUsuario int primary key identity,
 nombreUsuario varchar(50) not null,
-password varchar(50) not null);
+password varchar(50) not null,
+email varchar(50) not null,
+estado varchar(1) default 's');
 
 go
 
 insert into usuarios values
-('AVela','75865'),
-('SDemasi','76726'),
-('EVera','78198'),
-('TBonanzea','72087');
+('AVela','75865','azul.vela.junio@gmail.com','s'),
+('SDemasi','76726','','s'),
+('EVera','78198','','s'),
+('TBonanzea','72087','','s');
 
 insert into tipo_medida values
 ('Metros','Medida de longitud'),
@@ -326,9 +328,3 @@ insert into detalle_factura values
 (2,1,3,100,24),
 (2,1,5,3,1500),
 (3,2,8,1,2000);
-
-
-
-
-
-

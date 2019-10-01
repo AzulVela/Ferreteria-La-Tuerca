@@ -61,6 +61,7 @@
             this.btnEliminar.TabIndex = 17;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnActualizar
             // 
@@ -70,6 +71,7 @@
             this.btnActualizar.TabIndex = 16;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // btnNuevo
             // 
@@ -114,7 +116,6 @@
             this.chkTodos.TabIndex = 11;
             this.chkTodos.Text = "Todos";
             this.chkTodos.UseVisualStyleBackColor = true;
-            this.chkTodos.CheckedChanged += new System.EventHandler(this.ChkTodos_CheckedChanged);
             // 
             // btnConsultar
             // 

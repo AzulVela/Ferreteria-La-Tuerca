@@ -62,7 +62,6 @@
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtApellido
             // 
@@ -93,28 +92,18 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+
             // 
             // chkTodos
             // 
             this.chkTodos.AutoSize = true;
-<<<<<<< HEAD
-            this.chkTodos.Location = new System.Drawing.Point(140, 155);
-            this.chkTodos.Name = "chkTodos";
-            this.chkTodos.Size = new System.Drawing.Size(79, 24);
-            this.chkTodos.TabIndex = 10;
-            this.chkTodos.Text = "Todos";
-            this.chkTodos.UseVisualStyleBackColor = true;
-            this.chkTodos.CheckedChanged += new System.EventHandler(this.ChkTodos_CheckedChanged);
-=======
             this.chkTodos.Location = new System.Drawing.Point(93, 100);
-            this.chkTodos.Margin = new System.Windows.Forms.Padding(2);
             this.chkTodos.Name = "chkTodos";
             this.chkTodos.Size = new System.Drawing.Size(56, 17);
             this.chkTodos.TabIndex = 10;
             this.chkTodos.Text = "Todos";
             this.chkTodos.UseVisualStyleBackColor = true;
->>>>>>> 39839aa15320fd53e0929e58035cc876c333286b
+            this.chkTodos.CheckedChanged += new System.EventHandler(this.ChkTodos_CheckedChanged);
             // 
             // btnConsultar
             // 
@@ -134,7 +123,6 @@
             this.dgvClientes.RowHeadersWidth = 62;
             this.dgvClientes.Size = new System.Drawing.Size(405, 195);
             this.dgvClientes.TabIndex = 0;
-            this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvClientes_CellContentClick);
             // 
             // btnNuevo
             // 

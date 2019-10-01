@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TpLaTuerca.Entidades;
 using TpLaTuerca.LogicaNegocio;
+using static TpLaTuerca.Presentacion.Usuarios.frmABMUsuario;
 
 namespace TpLaTuerca.Presentacion.Usuarios
 {
@@ -23,36 +25,29 @@ namespace TpLaTuerca.Presentacion.Usuarios
 
         private void BtnConsultar_Click(object sender, EventArgs e)
         {
-            var filtros = new Dictionary<string, object>();
-
             if (!chkTodos.Checked)
             {
                 if (txtNombre.Text != string.Empty)
                 {
-                    filtros.Add("usuario", txtNombre.Text);
+                    List<Usuario> usuario = new List<Usuario>();
+                    usuario.Add(oUsuarioService.ObtenerUsuario(txtNombre.Text));
+                    dgvUsuarios.DataSource = usuario;
                 }
 
-                if (filtros.Count > 0)
-                    dgvUsuarios.DataSource = oUsuarioService.ConsultarConFiltros(filtros); //No implementado
                 else
                     MessageBox.Show("Se debe ingresar al menos un criterio de búsqueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-
             }
 
             else
                 dgvUsuarios.DataSource = oUsuarioService.ObtenerTodos();
         }
 
-        private void ChkTodos_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
-            frmABMUsuarios formulario = new frmABMUsuarios();
+            frmABMUsuario formulario = new frmABMUsuario();
             formulario.ShowDialog();
+            BtnConsultar_Click(sender, e);
 
         }
 
@@ -60,5 +55,24 @@ namespace TpLaTuerca.Presentacion.Usuarios
         {
             this.Close();
         }
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            frmABMUsuario formulario = new frmABMUsuario();
+            var usuario = (Usuario)dgvUsuarios.CurrentRow.DataBoundItem;
+            formulario.InicializarFormulario(FormMode.update, usuario);
+            formulario.ShowDialog();
+            BtnConsultar_Click(sender, e);
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            frmABMUsuario formulario = new frmABMUsuario();
+            var usuario = (Usuario)dgvUsuarios.CurrentRow.DataBoundItem;
+            formulario.InicializarFormulario(FormMode.delete, usuario);
+            formulario.ShowDialog();
+            BtnConsultar_Click(sender, e);
+        }
+
     }
 }

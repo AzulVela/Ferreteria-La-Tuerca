@@ -25,7 +25,8 @@ namespace TpLaTuerca.LogicaNegocio
             var usr = oUsuarioDao.GetUser(usuario);
 
             if (usr != null)
-            { if (usr.Password != null && usr.Password.Equals(password))
+            {
+                if (usr.Password != null && usr.Password.Equals(password))
                 {
                     return usr;
                 }
@@ -33,9 +34,24 @@ namespace TpLaTuerca.LogicaNegocio
             return null;
         }
 
-        internal object ConsultarConFiltros(Dictionary<string, object> filtros)
+        public Usuario ObtenerUsuario(string usuario)
         {
-            throw new NotImplementedException();
+            return oUsuarioDao.GetUser(usuario);
+        }
+
+        internal bool CrearUsuario(Usuario oUsuario)
+        {
+            return oUsuarioDao.Insert(oUsuario);
+        }
+
+        internal bool ActualizarUsuario(Usuario oUsuarioSelected)
+        {
+            return oUsuarioDao.Update(oUsuarioSelected);
+        }
+
+        internal bool ModificarEstado(Usuario oUsuarioSelected)
+        {
+            return oUsuarioDao.UpdateState(oUsuarioSelected);
         }
     }
 }

@@ -91,49 +91,49 @@
             // 
             this.txtTelefono.Location = new System.Drawing.Point(104, 79);
             this.txtTelefono.Name = "txtTelefono";
-<<<<<<< HEAD
+
             this.txtTelefono.Size = new System.Drawing.Size(288, 26);
             this.txtTelefono.TabIndex = 3;
-=======
+
             this.txtTelefono.Size = new System.Drawing.Size(193, 20);
             this.txtTelefono.TabIndex = 5;
->>>>>>> 39839aa15320fd53e0929e58035cc876c333286b
+
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(104, 17);
             this.txtNombre.Name = "txtNombre";
-<<<<<<< HEAD
+
             this.txtNombre.Size = new System.Drawing.Size(288, 26);
             this.txtNombre.TabIndex = 1;
-=======
+
             this.txtNombre.Size = new System.Drawing.Size(193, 20);
             this.txtNombre.TabIndex = 6;
->>>>>>> 39839aa15320fd53e0929e58035cc876c333286b
+
             // 
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(104, 48);
             this.txtApellido.Name = "txtApellido";
-<<<<<<< HEAD
+
             this.txtApellido.Size = new System.Drawing.Size(288, 26);
             this.txtApellido.TabIndex = 2;
-=======
+
             this.txtApellido.Size = new System.Drawing.Size(193, 20);
             this.txtApellido.TabIndex = 7;
->>>>>>> 39839aa15320fd53e0929e58035cc876c333286b
+
             // 
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(100, 153);
             this.btnAceptar.Name = "btnAceptar";
-<<<<<<< HEAD
+
             this.btnAceptar.Size = new System.Drawing.Size(112, 35);
             this.btnAceptar.TabIndex = 5;
-=======
+
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 8;
->>>>>>> 39839aa15320fd53e0929e58035cc876c333286b
+
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
@@ -142,13 +142,13 @@
             // 
             this.btnCancelar.Location = new System.Drawing.Point(181, 153);
             this.btnCancelar.Name = "btnCancelar";
-<<<<<<< HEAD
+
             this.btnCancelar.Size = new System.Drawing.Size(112, 35);
             this.btnCancelar.TabIndex = 6;
-=======
+
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 9;
->>>>>>> 39839aa15320fd53e0929e58035cc876c333286b
+
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
