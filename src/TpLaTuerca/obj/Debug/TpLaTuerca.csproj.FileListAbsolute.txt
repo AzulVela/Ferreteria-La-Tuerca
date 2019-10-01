@@ -75,3 +75,4 @@ C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Deb
 C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.csproj.CoreCompileInputs.cache
 C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.exe
 C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.pdb
+C:\Users\Ernesto\Desktop\PAVVV\Ferreteria-La-Tuerca\src\TpLaTuerca\bin\Debug\TpLaTuerca.exe.config

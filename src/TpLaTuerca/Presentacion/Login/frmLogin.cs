@@ -80,8 +80,8 @@ namespace TpLaTuerca.Presentación.Login
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblfecha.Text = DateTime.Now.ToShortDateString();
-            lblhora.Text =  DateTime.Now.ToString("HH:mm") + " - ";
+            lblfecha.Text ="Fecha: " + DateTime.Now.ToShortDateString();
+            lblhora.Text = "Hora: " + DateTime.Now.ToString("HH:mm");
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -89,9 +89,37 @@ namespace TpLaTuerca.Presentación.Login
 
         }
 
-        private void Lblhora_Click(object sender, EventArgs e)
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //Al presionar enter en la caja de usuario baja hacia la contraseña
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == (char)(Keys.Enter))
+            {
+                e.Handled = true;
+                SendKeys.Send("{TAB}");
+            }
+        }
+        
+
+        //Al presionar enter en la caja de contraseña selecciona ingresar
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)(Keys.Enter))
+            {
+                btnIngresar.PerformClick();
+            }
+        }
+
     }
 }
