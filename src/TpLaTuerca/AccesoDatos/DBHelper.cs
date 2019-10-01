@@ -12,7 +12,7 @@ namespace TpLaTuerca
 
         private DBHelper()
         {
-            string_conexion = @"Data Source=DESKTOP-VMDU3K3\SQLEXPRESS01;Initial Catalog=tp_latuerca;Integrated Security=True";
+            string_conexion = @"Data Source=ERNEST\SQLEXPRESS;Initial Catalog=Tp_LaTuerca;Integrated Security=True";
         }
 
         public static DBHelper GetDBHelper()

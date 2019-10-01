@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TpLaTuerca.Entidades;
 using TpLaTuerca.LogicaNegocio;
-using static TpLaTuerca.Presentacion.Usuarios.frmABMUsuario;
+
 
 namespace TpLaTuerca.Presentacion.Usuarios
 {
@@ -60,7 +60,7 @@ namespace TpLaTuerca.Presentacion.Usuarios
         {
             frmABMUsuario formulario = new frmABMUsuario();
             var usuario = (Usuario)dgvUsuarios.CurrentRow.DataBoundItem;
-            formulario.InicializarFormulario(FormMode.update, usuario);
+            formulario.InicializarFormulario(TpLaTuerca.Presentacion.Usuarios.frmABMUsuario.FormMode.update, usuario);
             formulario.ShowDialog();
             BtnConsultar_Click(sender, e);
         }
@@ -69,7 +69,7 @@ namespace TpLaTuerca.Presentacion.Usuarios
         {
             frmABMUsuario formulario = new frmABMUsuario();
             var usuario = (Usuario)dgvUsuarios.CurrentRow.DataBoundItem;
-            formulario.InicializarFormulario(FormMode.delete, usuario);
+            formulario.InicializarFormulario(TpLaTuerca.Presentacion.Usuarios.frmABMUsuario.FormMode.delete, usuario);
             formulario.ShowDialog();
             BtnConsultar_Click(sender, e);
         }
