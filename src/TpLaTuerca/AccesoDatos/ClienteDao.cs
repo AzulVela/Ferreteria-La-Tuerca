@@ -16,7 +16,7 @@ namespace TpLaTuerca.AccesoDatos
             var prs = new Dictionary<string, object>();
             prs.Add("cuit", cuit);
 
-            var resultado = DBHelper.GetDBHelper().ConsultaSQLConParametros(sql, prs);
+            var resultado = DataManager.GetInstance().ConsultaSQLConParametros(sql, prs);
 
             if (resultado.Rows.Count > 0)
             {
@@ -30,9 +30,9 @@ namespace TpLaTuerca.AccesoDatos
         {
             List<Cliente> listaCliente = new List<Cliente>();
 
-            String sql = "select codcliente, Apellido, nombre, telefono, cuit from cliente where estado = 's'";
+            String sql = "select codcliente, Apellido, nombre, telefono, cuit from cliente where habilitado = 1";
 
-            var resultado = DBHelper.GetDBHelper().ConsultaSQL(sql);
+            var resultado = DataManager.GetInstance().ConsultaSQL(sql);
 
             foreach(DataRow row in resultado.Rows)
             {
@@ -46,7 +46,7 @@ namespace TpLaTuerca.AccesoDatos
         {
             List<Cliente> lst = new List<Cliente>();
 
-            String sql = "SELECT * FROM cliente where estado = 's'";
+            String sql = "SELECT * FROM cliente where habilitado = 1";
 
             if (parametros.ContainsKey("Nombre"))
             {
@@ -58,7 +58,7 @@ namespace TpLaTuerca.AccesoDatos
                 sql += "AND (Apellido LIKE @Apellido)";
             }
 
-            var resultado = DBHelper.GetDBHelper().ConsultaSQLConParametros(sql, parametros);
+            var resultado = DataManager.GetInstance().ConsultaSQLConParametros(sql, parametros);
 
             foreach (DataRow row in resultado.Rows)
                 lst.Add(ObjectMapping(row));
@@ -68,11 +68,11 @@ namespace TpLaTuerca.AccesoDatos
 
         internal bool ChangeStateClient(Cliente oClienteSelected)
         {
-            String sql = "update cliente set estado = 'n' where codcliente = @codcliente";
+            String sql = "update cliente set habilitado = 0 where codcliente = @codcliente";
             var prs = new Dictionary<string, object>();
             prs.Add("codcliente", oClienteSelected.CodCliente);
 
-            return DBHelper.GetDBHelper().EjecutarSQL(sql, prs) == 1;
+            return DataManager.GetInstance().EjecutarSQL(sql, prs) == 1;
         }
 
         internal bool UpdateClient(Cliente oClienteSelected)
@@ -85,7 +85,7 @@ namespace TpLaTuerca.AccesoDatos
             prs.Add("telefono", oClienteSelected.Telefono);
             prs.Add("cuit", oClienteSelected.CUIT);
 
-            return DBHelper.GetDBHelper().EjecutarSQL(sql, prs) == 1;
+            return DataManager.GetInstance().EjecutarSQL(sql, prs) == 1;
         }
 
         internal bool Create(Cliente oCliente)
@@ -98,7 +98,7 @@ namespace TpLaTuerca.AccesoDatos
             prs.Add("telefono", oCliente.Telefono);
             prs.Add("cuit", oCliente.CUIT);
 
-            return (DBHelper.GetDBHelper().EjecutarSQL(sql, prs) == 1);
+            return (DataManager.GetInstance().EjecutarSQL(sql, prs) == 1);
         }
 
         private Cliente ObjectMapping(DataRow dataRow)

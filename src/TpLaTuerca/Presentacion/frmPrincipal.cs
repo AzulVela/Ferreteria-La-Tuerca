@@ -12,6 +12,7 @@ using TpLaTuerca.Presentacion.Productos;
 using TpLaTuerca.Presentación.Cliente;
 using TpLaTuerca.Presentación.Login;
 using TpLaTuerca.Presentacion.Usuarios;
+using TpLaTuerca.Presentacion.Factura;
 
 namespace TpLaTuerca
 {
@@ -75,6 +76,12 @@ namespace TpLaTuerca
         {
             frmUsuarios usuario = new frmUsuarios();
             usuario.Show();
+        }
+
+        private void FacturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFactura fac = new frmFactura();
+            fac.ShowDialog();
         }
     }
 }

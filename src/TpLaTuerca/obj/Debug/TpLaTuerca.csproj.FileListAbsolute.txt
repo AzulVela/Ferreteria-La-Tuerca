@@ -93,3 +93,6 @@ C:\Users\Ernesto\Desktop\PAVVV\Ferreteria-La-Tuerca\src\TpLaTuerca\bin\Debug\TpL
 C:\Users\Ernesto\Desktop\PAVVV\Ferreteria-La-Tuerca\src\TpLaTuerca\bin\Debug\TpLaTuerca.pdb
 C:\Users\Ernesto\Desktop\PAVVV\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.exe
 C:\Users\Ernesto\Desktop\PAVVV\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.pdb
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Usuarios.frmABMUsuario.resources
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Usuarios.frmUsuarios.resources
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Factura.frmFactura.resources

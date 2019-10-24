@@ -8,5 +8,10 @@ namespace TpLaTuerca.AccesoDatos
 {
     class ProveedorDao
     {
+        internal object GetAll()
+        {
+            string sql = "select * from proveedor where habilitado = 1";
+            return DataManager.GetInstance().ConsultaSQL(sql);
+        }
     }
 }

@@ -14,7 +14,7 @@ CREATE TABLE [dbo].[Cliente](
 	[Nombre] [varchar](20) NOT NULL,
 	[Telefono] [varchar](30) NULL,
 	[CUIT] [varchar](15) NULL,
-	[Estado] [varchar](1) Default 's',
+	[Habilitado] [bit] Default 1,
  CONSTRAINT [PK_Cliente] PRIMARY KEY CLUSTERED 
 (
 	[CodCliente] ASC
@@ -49,7 +49,7 @@ CREATE TABLE [dbo].[Estructura](
 	[IdPSuperior] [int] NOT NULL,
 	[IdPInferior] [int] NOT NULL,
 	[Cantidad] [int] NULL,
-	[Estado] [varchar](1) Default 's',
+	[Habilitado] [bit] Default 1,
  CONSTRAINT [PK_Estructura] PRIMARY KEY CLUSTERED 
 (
 	[IdPSuperior] ASC,
@@ -89,6 +89,7 @@ CREATE TABLE [dbo].[Producto](
 	[Precio] [float] NULL,
 	[CodTipoUso] [int] NOT NULL,
 	[CodProveedor] [int] NOT NULL,
+	[Habilitado] [bit] default 1
  CONSTRAINT [PK_Producto] PRIMARY KEY CLUSTERED 
 (
 	[CodProducto] ASC
@@ -107,7 +108,7 @@ CREATE TABLE [dbo].[Proveedor](
 	[Direccion] [varchar](50) NULL,
 	[Telefono] [varchar](30) NULL,
 	[TiempoDeEntrega] [int] NULL,
-	[Estado] [varchar](1) Default 's',
+	[Habilitado] [bit] Default 1,
  CONSTRAINT [PK_Proveedor] PRIMARY KEY CLUSTERED 
 (
 	[CodProveedor] ASC
@@ -245,15 +246,15 @@ create table usuarios
 nombreUsuario varchar(50) not null,
 password varchar(50) not null,
 email varchar(50) not null,
-estado varchar(1) default 's');
+habilitado bit default 1);
 
 go
 
 insert into usuarios values
-('AVela','75865','azul.vela.junio@gmail.com','s'),
-('SDemasi','76726','','s'),
-('EVera','78198','','s'),
-('TBonanzea','72087','','s');
+('AVela','75865','azul.vela.junio@gmail.com',1),
+('SDemasi','76726','',1),
+('EVera','78198','',1),
+('TBonanzea','72087','',1);
 
 insert into tipo_medida values
 ('Metros','Medida de longitud'),
@@ -270,28 +271,28 @@ insert into tipo_uso values
 ('Producto terminado','Producto fabricado por la ferretería con insumos propios');
 
 insert into proveedor values 
-('Ferro','Cons','Duarte Quiroz 621','351-2293485',30,'s'),
-('Zara','Te','Av. Colón 829','351-2397372',15,'s'),
-('Falco','Hnos.','Acuña 81','3571-648292',20,'s'),
-('Fabricación propia',null,null,null,null,'s');
+('Ferro','Cons','Duarte Quiroz 621','351-2293485',30,1),
+('Zara','Te','Av. Colón 829','351-2397372',15,1),
+('Falco','Hnos.','Acuña 81','3571-648292',20,1),
+('Fabricación propia',null,null,null,null,1);
 
 
 insert into producto values 
-('Amoladora','Herramienta',5,3000,1,1),
-('Hormigonera','Maquinaria albañilería',5,10000,2,2),
-('Clavo corto','Clavo 4cm',6,0.24,1,3),
-('Clavo largo','Clavo 7cm',6,0.40,1,3),
-('Placa Madera','Insumo de carpintería',2,500,3,2),
-('Tornillo','Insumo general',1,0.60,1,1),
-('Tuerca','Insumo general',1,0.40,1,3),
-('Mesa','Mesa por m2',2,2000,4,4);
+('Amoladora','Herramienta',5,3000,1,1,1),
+('Hormigonera','Maquinaria albañilería',5,10000,2,2,1),
+('Clavo corto','Clavo 4cm',6,0.24,1,3,1),
+('Clavo largo','Clavo 7cm',6,0.40,1,3,1),
+('Placa Madera','Insumo de carpintería',2,500,3,2,1),
+('Tornillo','Insumo general',1,0.60,1,1,1),
+('Tuerca','Insumo general',1,0.40,1,3,1),
+('Mesa','Mesa por m2',2,2000,4,4,1);
 
 insert into estructura values
-(8,5,2,'s'),
-(8,3,20,'s'),
-(8,4,20,'s'),
-(8,6,8,'s'),
-(8,7,8,'s');
+(8,5,2,1),
+(8,3,20,1),
+(8,4,20,1),
+(8,6,8,1),
+(8,7,8,1);
 
 insert into tipo_factura values 
 ('A','Emitida por RI a RI'),

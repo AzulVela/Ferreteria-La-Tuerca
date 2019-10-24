@@ -74,5 +74,14 @@ namespace TpLaTuerca.Presentacion.Usuarios
             BtnConsultar_Click(sender, e);
         }
 
+        private void ChkTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkTodos.Checked == true)
+            {
+                txtNombre.Enabled = false;
+            }
+            else
+                txtNombre.Enabled = true;
+        }
     }
 }

@@ -15,5 +15,10 @@ namespace TpLaTuerca.Entidades
         public float Precio { set; get; }
         public TipoUso TipoUso { set; get; }
         public Proveedor Proveedor { set; get; }
+
+        internal bool CrearProducto(Producto oProducto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

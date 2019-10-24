@@ -12,5 +12,6 @@ namespace TpLaTuerca.Entidades
         public Producto Producto { set; get; }
         public int Cantidad { set; get; }
         public float Precio { set; get; }
+        public float Importe { get; internal set; }
     }
 }

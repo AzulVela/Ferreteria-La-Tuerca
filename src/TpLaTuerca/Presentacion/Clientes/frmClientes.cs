@@ -78,14 +78,16 @@ namespace TpLaTuerca.Presentación.Cliente
 
         private void ChkTodos_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkTodos.Checked)
+            if (chkTodos.Checked == true)
             {
-                txtApellido.Enabled = false;
                 txtNombre.Enabled = false;
+                txtApellido.Enabled = false;
             }
             else
+            { 
                 txtApellido.Enabled = true;
                 txtNombre.Enabled = true;
+            }
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)

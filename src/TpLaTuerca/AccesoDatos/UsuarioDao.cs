@@ -16,13 +16,13 @@ namespace TpLaTuerca.AccesoDatos
                 //Construimos la consulta sql para buscar el usuario en la base de datos.
                 String strSql = string.Concat(" SELECT idUsuario, nombreUsuario, password, email",
                                               "   FROM Usuarios",
-                                              "  WHERE nombreUsuario =  @usuario AND estado = 's'");
+                                              "  WHERE nombreUsuario =  @usuario AND habilitado = 1");
 
                 var parametros = new Dictionary<string, object>();
 
                 parametros.Add("usuario", nombreUsuario);
                 //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
-                var resultado = DBHelper.GetDBHelper().ConsultaSQLConParametros(strSql, parametros);
+                var resultado = DataManager.GetInstance().ConsultaSQLConParametros(strSql, parametros);
 
                 // Validamos que el resultado tenga al menos una fila.
                 if (resultado.Rows.Count > 0)
@@ -45,20 +45,20 @@ namespace TpLaTuerca.AccesoDatos
             parametros.Add("password",oUsuarioSelected.Password);
             parametros.Add("email",oUsuarioSelected.Email);
 
-            int resultado = DBHelper.GetDBHelper().EjecutarSQL(sql, parametros);
+            int resultado = DataManager.GetInstance().EjecutarSQL(sql, parametros);
 
             return resultado == 1;
         }
 
         internal bool UpdateState(Usuario oUsuarioSelected)
         {
-            String sql = "UPDATE usuarios SET estado = 'n' WHERE idUsuario = @id";
+            String sql = "UPDATE usuarios SET habilitado = 0 WHERE idUsuario = @id";
 
             var parametros = new Dictionary<string, object>();
 
             parametros.Add("id", oUsuarioSelected.IdUsuario);
 
-            int resultado = DBHelper.GetDBHelper().EjecutarSQL(sql, parametros);
+            int resultado = DataManager.GetInstance().EjecutarSQL(sql, parametros);
 
             return resultado == 1;
         }
@@ -73,7 +73,7 @@ namespace TpLaTuerca.AccesoDatos
             parametros.Add("password", oUsuario.Password);
             parametros.Add("email", oUsuario.Email);
 
-            int resultado = DBHelper.GetDBHelper().EjecutarSQL(sql, parametros);
+            int resultado = DataManager.GetInstance().EjecutarSQL(sql, parametros);
 
             return resultado == 1;
         }
@@ -82,9 +82,9 @@ namespace TpLaTuerca.AccesoDatos
         {
             List<Usuario> listaUsuario = new List<Usuario>();
 
-            String sql = "SELECT idUsuario, nombreUsuario, password, email FROM usuarios WHERE estado = 's'";
+            String sql = "SELECT idUsuario, nombreUsuario, password, email FROM usuarios WHERE habilitado = 1";
 
-            var resultado = DBHelper.GetDBHelper().ConsultaSQL(sql);
+            var resultado = DataManager.GetInstance().ConsultaSQL(sql);
 
             foreach (DataRow row in resultado.Rows)
             {

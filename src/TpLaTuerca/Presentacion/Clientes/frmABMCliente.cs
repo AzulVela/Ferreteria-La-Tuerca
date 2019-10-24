@@ -46,6 +46,7 @@ namespace TpLaTuerca.Presentación.Clientes
 
         private void frmABMCliente_Load(object sender, EventArgs e)
         {
+            this.CenterToParent();
             switch(formMode)
             {
                 case FormMode.insert:
