@@ -123,7 +123,7 @@ namespace TpLaTuerca.Presentación.Clientes
 
                                 if (oClienteService.CrearCliente(oCliente))
                                 {
-                                    MessageBox.Show("Usuario insertado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Cliente insertado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
 

@@ -12,7 +12,7 @@ namespace TpLaTuerca.AccesoDatos
     {
         public Entidades.Cliente GetCliente(string cuit)
         {
-            String sql = "select codcliente, Apellido, nombre, telefono, cuit from cliente where nombre = @cuit";
+            String sql = "select codcliente, Apellido, nombre, telefono, cuit from cliente where CUIT = @cuit";
             var prs = new Dictionary<string, object>();
             prs.Add("cuit", cuit);
 
@@ -110,7 +110,6 @@ namespace TpLaTuerca.AccesoDatos
                 Apellido = dataRow["Apellido"].ToString(),
                 CUIT = dataRow["CUIT"].ToString(),
                 Telefono = dataRow["telefono"].ToString()
-
             };
 
             return oCliente;

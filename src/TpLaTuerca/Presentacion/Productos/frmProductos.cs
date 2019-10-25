@@ -124,5 +124,10 @@ namespace TpLaTuerca.Presentacion.Productos
             formulario.ShowDialog();
 
         }
+
+        private void DgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
