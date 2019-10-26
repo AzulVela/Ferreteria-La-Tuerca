@@ -19,14 +19,18 @@ namespace TpLaTuerca.Presentacion.Factura
         private readonly ClienteService oClienteService;
         private readonly VendedorService oVendedorService;
         private readonly ProductoService oProductoService;
+        private readonly FacturaService oFacturaService;
 
         public frmFactura()
         {
             InitializeComponent();
+
+            dgvDetalle.AutoGenerateColumns = false;
             oTipoFacturaService = new TipoFacturaService();
             oClienteService = new ClienteService();
             oVendedorService = new VendedorService();
             oProductoService = new ProductoService();
+            oFacturaService = new FacturaService();
             lstDetalles = new BindingList<DetalleFactura>();
 
         }
@@ -46,8 +50,12 @@ namespace TpLaTuerca.Presentacion.Factura
             this.CenterToParent();
             LlenarCombo(cboTipoFactura,oTipoFacturaService.ObtenerTodos(),"nombre","codtipofactura");
             LlenarCombo(cboCliente, oClienteService.ObtenerTodos(), "Apellido", "codcliente");
-            LlenarCombo(cboVendedor, oVendedorService.ObtenerTodos(), "Apellido","nrotipodoc");
+            LlenarCombo(cboVendedor, oVendedorService.ObtenerTodos(), "Apellido","NroDoc");
             LlenarCombo(cboProducto, oProductoService.ObtenerTodos(new Dictionary<string, object>()), "Nombre", "codproducto");
+            txtPrecio.ReadOnly = true;
+            txtTotal.ReadOnly = true;
+            txtImporte.ReadOnly = true;
+            dgvDetalle.DataSource = lstDetalles;
 
         }
 
@@ -125,6 +133,58 @@ namespace TpLaTuerca.Presentacion.Factura
                 var prod = (Producto)cboProducto.SelectedItem;
                 txtImporte.Text = (cant * prod.Precio).ToString("C");
             }
+        }
+
+        private void BtnQuitarItem_Click(object sender, EventArgs e)
+        {
+            if (dgvDetalle.CurrentRow != null)
+            {
+                var selectedDetalle = (DetalleFactura)dgvDetalle.CurrentRow.DataBoundItem;
+                lstDetalles.Remove(selectedDetalle);
+
+                var total = lstDetalles.Sum(p => p.Importe);
+                txtTotal.Text = total.ToString("C");
+            }
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            //try
+            //{
+                var factura = new Entidades.Factura
+                {
+                    FechaFactura = dtpFecha.Value,
+                    DetalleFactura = lstDetalles,
+                    Cliente = (Cliente)cboCliente.SelectedItem,
+                    TipoFactura = (TipoFactura)cboTipoFactura.SelectedItem,
+                    Vendedor = (Vendedor)cboVendedor.SelectedItem
+                };
+
+                if (oFacturaService.ValidarDatos(factura))
+                {
+                    oFacturaService.Crear(factura);
+
+                    MessageBox.Show(string.Concat("La factura nro: ", factura.NroFactura, " se generó correctamente."), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    btnAgregarItem.Enabled = false;
+                    cboTipoFactura.SelectedIndex = -1;
+                    cboCliente.SelectedIndex = -1;
+                    cboVendedor.SelectedIndex = -1;
+                    cboProducto.SelectedIndex = -1;
+
+                    dgvDetalle.DataSource = null;
+                }
+            //}
+
+            //catch (Exception ex)
+           // {
+               // MessageBox.Show("Error al registrar la factura " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
     }
 }

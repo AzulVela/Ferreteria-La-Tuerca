@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="AccesoDatos\ClienteDao.cs" />
     <Compile Include="AccesoDatos\DataManager.cs" />
+    <Compile Include="AccesoDatos\FacturaDao.cs" />
     <Compile Include="AccesoDatos\ProductoDao.cs" />
     <Compile Include="AccesoDatos\ProveedorDao.cs" />
     <Compile Include="AccesoDatos\TipoFacturaDao.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Entidades\Vendedor.cs" />
     <Compile Include="LogicaNegocio\ClienteService.cs" />
+    <Compile Include="LogicaNegocio\FacturaService.cs" />
     <Compile Include="LogicaNegocio\ProductoService.cs" />
     <Compile Include="LogicaNegocio\ProveedorService.cs" />
     <Compile Include="LogicaNegocio\TipoMedidaService.cs" />

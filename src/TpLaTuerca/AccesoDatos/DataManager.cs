@@ -17,6 +17,40 @@ public class DataManager
         dbConnection.ConnectionString = string_conexion;
     }
 
+    public object ConsultaSQLScalar(string strSql)
+
+    {
+
+        SqlCommand cmd = new SqlCommand();
+
+        try
+
+        {
+
+            cmd.Connection = dbConnection;
+
+            cmd.Transaction = dbTransaction;
+
+            cmd.CommandType = CommandType.Text;
+
+            // Establece la instrucción a ejecutar
+
+            cmd.CommandText = strSql;
+
+            return cmd.ExecuteScalar();
+
+        }
+
+        catch (SqlException ex)
+
+        {
+
+            throw (ex);
+
+        }
+
+    }
+
     public void BeginTransaction()
     {
         if (dbConnection.State == ConnectionState.Open)

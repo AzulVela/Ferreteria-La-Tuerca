@@ -12,6 +12,7 @@ namespace TpLaTuerca.Entidades
         public TipoFactura TipoFactura { set; get; }
         public Cliente Cliente { set; get; }
         public Vendedor Vendedor { set; get; }
+        public IList<DetalleFactura> DetalleFactura { set; get; }
         public DateTime FechaFactura { set; get; }
     }
 }

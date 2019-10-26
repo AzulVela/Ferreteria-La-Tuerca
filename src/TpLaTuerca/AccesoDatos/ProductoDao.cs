@@ -77,7 +77,7 @@ namespace TpLaTuerca.AccesoDatos
                                        "tu.Nombre as 'NombreTU', ",
                                        "tu.Descripcion as 'DescripcionTU', ",
                                        "pr.CodProveedor, ",
-                                       "pr.Nombre as 'NombrePR' ",
+                                       "pr.Apellido as 'NombrePR' ",
                                        "from producto p join tipo_medida tm on p.codtipomedida = tm.Codtipomedida ",
                                        "join tipo_uso tu on p.Codtipouso = tu.Codtipouso join proveedor pr on p.Codproveedor = pr.CodProveedor ",
                                        "where p.habilitado = 1 and p.nombre = @nombre "); 
@@ -111,7 +111,7 @@ namespace TpLaTuerca.AccesoDatos
                                        "tu.Nombre as 'NombreTU', ",
                                        "tu.Descripcion as 'DescripcionTU', ",
                                        "pr.CodProveedor, ",
-                                       "pr.Nombre as 'NombrePR' ",
+                                       "pr.Apellido as 'NombrePR' ",
                                        "from producto p join tipo_medida tm on p.codtipomedida = tm.Codtipomedida ",
                                        "join tipo_uso tu on p.Codtipouso = tu.Codtipouso join proveedor pr on p.Codproveedor = pr.CodProveedor ",
                                        "where p.habilitado = 1 ");

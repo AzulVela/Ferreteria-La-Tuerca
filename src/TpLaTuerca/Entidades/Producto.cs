@@ -16,9 +16,9 @@ namespace TpLaTuerca.Entidades
         public TipoUso TipoUso { set; get; }
         public Proveedor Proveedor { set; get; }
 
-        internal bool CrearProducto(Producto oProducto)
+        public override string ToString()
         {
-            throw new NotImplementedException();
+            return Nombre;
         }
     }
 }
