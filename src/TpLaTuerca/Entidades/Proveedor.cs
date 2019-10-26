@@ -14,7 +14,6 @@ namespace TpLaTuerca.Entidades
         public string Direccion { set; get; }
         public string Telefono { set; get; }
         public int TiempoEntrega { set; get; }
-        public string Estado { set; get; }
 
         public override string ToString()
         {
