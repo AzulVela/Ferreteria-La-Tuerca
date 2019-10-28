@@ -35,5 +35,15 @@ namespace TpLaTuerca.LogicaNegocio
         {
             return oProductoDao.CreateProducto(oProducto);
         }
+
+        internal bool ActualizarProducto(Producto oProductoSelected)
+        {
+            return oProductoDao.UpdateProducto(oProductoSelected);
+        }
+
+        internal bool DeshabilitarProducto(Producto oProductoSelected)
+        {
+            return oProductoDao.DeleteProducto(oProductoSelected);
+        }
     }
 }

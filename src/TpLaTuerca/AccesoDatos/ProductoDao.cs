@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace TpLaTuerca.AccesoDatos
     {
         internal object GetByFilters(Dictionary<string, object> filtros)
         {
-            List<Producto> lst = new List<Producto>();
+            BindingList<Producto> lst = new BindingList<Producto>();
             String sql = string.Concat("select ",
                                        "p.CodProducto, ",
                                        "p.Nombre, ",
@@ -46,6 +47,38 @@ namespace TpLaTuerca.AccesoDatos
                 lst.Add(ObjectMapping(row));
             }
             return lst;
+        }
+
+        internal bool DeleteProducto(Producto oProductoSelected)
+        {
+            string sql = "update producto set habilitado = 0 where codproducto = @codproducto";
+            var prs = new Dictionary<string, object>();
+            prs.Add("codproducto", oProductoSelected.CodProducto);
+
+            return DataManager.GetInstance().EjecutarSQL(sql, prs) > 0;
+        }
+
+        internal bool UpdateProducto(Producto oProductoSelected)
+        {
+            string sql = string.Concat("update producto set ",
+                                       "nombre = @nombre, ",
+                                       "descripcion = @desc, ",
+                                       "codtipomedida = @codtipomedida, ",
+                                       "precio = @precio, ",
+                                       "codtipouso = @codtipouso, ",
+                                       "codproveedor = @codproveedor ",
+                                       "where codproducto = @codproducto");
+
+            var prs = new Dictionary<string, object>();
+            prs.Add("nombre", oProductoSelected.Nombre);
+            prs.Add("desc", oProductoSelected.Descripcion);
+            prs.Add("codtipomedida", oProductoSelected.TipoMedida.CodTipoMedida);
+            prs.Add("precio", oProductoSelected.Precio);
+            prs.Add("codtipouso", oProductoSelected.TipoUso.CodTipoUso);
+            prs.Add("codproveedor", oProductoSelected.Proveedor.CodProveedor);
+            prs.Add("codproducto", oProductoSelected.CodProducto);
+
+            return DataManager.GetInstance().EjecutarSQL(sql, prs) > 0;
         }
 
         internal bool CreateProducto(Producto oProducto)
@@ -97,7 +130,7 @@ namespace TpLaTuerca.AccesoDatos
 
         public IList<Producto> GetAll()
         {
-            List<Producto> lstProductos = new List<Producto>();
+            BindingList<Producto> lstProductos = new BindingList<Producto>();
 
             String sql = string.Concat("select ",
                                        "p.CodProducto, ",

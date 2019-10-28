@@ -20,5 +20,6 @@ namespace TpLaTuerca.Entidades
         {
             return Nombre;
         }
+
     }
 }

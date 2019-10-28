@@ -15,6 +15,7 @@ namespace TpLaTuerca.Entidades
         public string Telefono { set; get; }
         public int TiempoEntrega { set; get; }
 
+
         public override string ToString()
         {
             return Nombre;

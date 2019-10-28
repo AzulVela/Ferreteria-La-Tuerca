@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TpLaTuerca.Entidades;
 using TpLaTuerca.LogicaNegocio;
 
 namespace TpLaTuerca.Presentacion.Productos
@@ -19,7 +20,7 @@ namespace TpLaTuerca.Presentacion.Productos
         public frmProductos()
         {
             InitializeComponent();
-            InitializeDataGridView();
+           // InitializeDataGridView();
             oProductoService = new ProductoService();
             oTipoUsoService = new TipoUsoService();
         }
@@ -90,6 +91,11 @@ namespace TpLaTuerca.Presentacion.Productos
 
         private void BtnConsultar_Click(object sender, EventArgs e)
         {
+            LLenarGrilla();
+        }
+
+        public void LLenarGrilla()
+        {
             var filtros = new Dictionary<string, object>();
 
             if (!chkTodos.Checked)
@@ -122,12 +128,31 @@ namespace TpLaTuerca.Presentacion.Productos
         {
             frmDetalleProducto formulario = new frmDetalleProducto();
             formulario.ShowDialog();
+            LLenarGrilla();
 
         }
 
         private void DgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            frmDetalleProducto frm = new frmDetalleProducto();
+            var prod = (Producto)dgvProductos.CurrentRow.DataBoundItem;
+            frm.InicializarFormulario(frmDetalleProducto.FormMode.update, prod);
+            frm.ShowDialog();
+            LLenarGrilla();
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            frmDetalleProducto frm = new frmDetalleProducto();
+            var prod = (Producto)dgvProductos.CurrentRow.DataBoundItem;
+            frm.InicializarFormulario(frmDetalleProducto.FormMode.delete, prod);
+            frm.ShowDialog();
+            LLenarGrilla();
         }
     }
 }

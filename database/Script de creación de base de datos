@@ -274,7 +274,7 @@ insert into proveedor values
 ('Ferro','Cons','Duarte Quiroz 621','351-2293485',30,1),
 ('Zara','Te','Av. Colón 829','351-2397372',15,1),
 ('Falco','Hnos.','Acuña 81','3571-648292',20,1),
-('Fabricación propia',null,null,null,null,1);
+('Fabricación propia','Fabricación propia',null,null,null,1);
 
 
 insert into producto values 
