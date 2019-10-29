@@ -104,7 +104,6 @@ GO
 CREATE TABLE [dbo].[Proveedor](
 	[CodProveedor] [int] NOT NULL identity,
 	[Apellido] [varchar](20) NOT NULL,
-	[Apellido] [varchar](20) NOT NULL,
 	[Nombre] [varchar](20) NULL,
 	[Direccion] [varchar](50) NULL,
 	[Telefono] [varchar](30) NULL,

@@ -126,7 +126,12 @@ namespace TpLaTuerca.Presentación.Login
         private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
                 e.Cancel = false;
-                frmPrincipal.Close();
+              //  frmPrincipal.Close();
+        }
+
+        private void btnIngresar_MouseClick(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }
