@@ -36,46 +36,6 @@ namespace TpLaTuerca.Presentación.Proveedor
 
         }
 
-        private void FrmABMProveedor_Load(object sender, EventArgs e)
-        {
-            this.CenterToParent();
-            switch (formMode)
-            {
-                case FormMode.insert:
-                    {
-                        this.Text = "Nuevo Proveedor";
-                        break;
-                    }
-
-                case FormMode.update:
-                    {
-                        this.Text = "Actualizar Proveedor";
-                        MostrarDatos();
-                        txtNombre.Enabled = true;
-                        txtApellido.Enabled = true;
-                        txtDireccion.Enabled = true;
-                        txtTelefono.Enabled = true;
-                        txtTiempoEntrega.Enabled = true;
-                        break;
-
-                    }
-
-                case FormMode.delete:
-                    {
-                        MostrarDatos();
-                        this.Text = "Habilitar/Deshabilitar Proveedor";
-                        txtNombre.Enabled = false;
-                        txtApellido.Enabled = false;
-                        txtDireccion.Enabled = false;
-                        txtTelefono.Enabled = false;
-                        txtTiempoEntrega.Enabled = false;
-                        break;
-
-                    }
-
-            }
-        }
-
         private void MostrarDatos()
         {
             if (oProveedorSelected != null)
@@ -178,12 +138,72 @@ namespace TpLaTuerca.Presentación.Proveedor
             else
                 txtNombre.BackColor = Color.White;
 
+            if (txtApellido.Text == string.Empty)
+            {
+                txtApellido.BackColor = Color.Red;
+                txtApellido.Focus();
+                return false;
+            }
+            else
+                txtNombre.BackColor = Color.White;
+
             return true;
         }
 
         private bool ExisteProveedor()
         {
-            return oProveedorService.ObtenerProveedor(txtNombre.Text) != null;
+            return oProveedorService.ObtenerProveedor(oProveedorSelected) != null;
+        }
+
+        private void FrmABMProveedor_Load_1(object sender, EventArgs e)
+        {
+            this.CenterToParent();
+            switch (formMode)
+            {
+                case FormMode.insert:
+                    {
+                        this.Text = "Nuevo Proveedor";
+                        break;
+                    }
+
+                case FormMode.update:
+                    {
+                        this.Text = "Actualizar Proveedor";
+                        MessageBox.Show("Entra");
+                        MostrarDatos();
+                        txtNombre.Enabled = true;
+                        txtApellido.Enabled = true;
+                        txtDireccion.Enabled = true;
+                        txtTelefono.Enabled = true;
+                        txtTiempoEntrega.Enabled = true;
+                        break;
+
+                    }
+
+                case FormMode.delete:
+                    {
+                        MostrarDatos();
+                        this.Text = "Habilitar/Deshabilitar Proveedor";
+                        txtNombre.Enabled = false;
+                        txtApellido.Enabled = false;
+                        txtDireccion.Enabled = false;
+                        txtTelefono.Enabled = false;
+                        txtTiempoEntrega.Enabled = false;
+                        break;
+
+                    }
+
+            }
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void TxtApellido_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

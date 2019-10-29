@@ -37,19 +37,19 @@ namespace TpLaTuerca.LogicaNegocio
             return oProveedorDao.Insert(oProveedor);
         }
 
-        internal bool ActualizarProveedor(Proveedor oProveedorSelected)
+        internal bool ActualizarProveedor(Proveedor oProveedor)
         {
-            return oProveedorDao.Update(oProveedorSelected);
+            return oProveedorDao.Update(oProveedor);
         }
 
-        internal bool ModificarEstadoProveedor(Proveedor oProveedorSelected)
+        internal bool ModificarEstadoProveedor(Proveedor oProveedor)
         {
-            return oProveedorDao.UpdateState(oProveedorSelected);
+            return oProveedorDao.UpdateState(oProveedor);
         }
 
-        internal object ObtenerProveedor(string proveedor)
+        internal object ObtenerProveedor(Proveedor oProveedor)
         {
-            return oProveedorDao.GetProveedor(proveedor);
+            return oProveedorDao.GetProveedor(oProveedor);
         }
     }
 }

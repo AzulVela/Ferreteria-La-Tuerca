@@ -198,26 +198,6 @@ namespace TpLaTuerca.Presentación.Clientes
             else
                 txtApellido.BackColor = Color.White;
 
-            if (txtCuit.Text == string.Empty)
-            {
-                txtCuit.BackColor = Color.Red;
-                txtCuit.Focus();
-                return false;
-            }
-
-            else
-                txtCuit.BackColor = Color.White;
-
-            if (txtTelefono.Text == string.Empty)
-            {
-                txtTelefono.BackColor = Color.Red;
-                txtTelefono.Focus();
-                return false;
-            }
-
-            else
-                txtTelefono.BackColor = Color.White;
-
             return true;
         }
 

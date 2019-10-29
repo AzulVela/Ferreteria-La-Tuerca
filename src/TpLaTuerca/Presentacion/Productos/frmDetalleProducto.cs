@@ -296,5 +296,10 @@ namespace TpLaTuerca.Presentacion.Productos
         {
 
         }
+
+        private void LblNombre_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,11 +16,13 @@ namespace TpLaTuerca.Presentación.Login
         private readonly UsuarioService usuarioService;
 
         public string UsuarioLogueado { get; internal set; }
+        frmPrincipal frmPrincipal;
 
-        public frmLogin()
+        public frmLogin(frmPrincipal _frmPrincipal)
         {
             InitializeComponent();
             usuarioService = new UsuarioService();
+            frmPrincipal = _frmPrincipal;
         }
 
         private void Label1_Click(object sender, EventArgs e)
@@ -121,5 +123,10 @@ namespace TpLaTuerca.Presentación.Login
             }
         }
 
+        private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+                e.Cancel = false;
+                frmPrincipal.Close();
+        }
     }
 }

@@ -34,10 +34,10 @@
             this.txtConfirmarPass = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.MaskedTextBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -48,6 +48,7 @@
             this.btnCancelar.TabIndex = 34;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -71,10 +72,11 @@
             // txtConfirmarPass
             // 
             this.txtConfirmarPass.Location = new System.Drawing.Point(154, 116);
+            this.txtConfirmarPass.MaxLength = 50;
             this.txtConfirmarPass.Name = "txtConfirmarPass";
             this.txtConfirmarPass.PasswordChar = '*';
             this.txtConfirmarPass.Size = new System.Drawing.Size(192, 20);
-            this.txtConfirmarPass.TabIndex = 31;
+            this.txtConfirmarPass.TabIndex = 3;
             // 
             // Label3
             // 
@@ -88,17 +90,11 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(154, 84);
+            this.txtPassword.MaxLength = 50;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(192, 20);
-            this.txtPassword.TabIndex = 30;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(154, 52);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(192, 20);
-            this.txtEmail.TabIndex = 28;
+            this.txtPassword.TabIndex = 2;
             // 
             // Label2
             // 
@@ -121,22 +117,31 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(154, 19);
+            this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(192, 20);
-            this.txtNombre.TabIndex = 27;
+            this.txtNombre.TabIndex = 0;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(154, 52);
+            this.txtEmail.MaxLength = 50;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(192, 20);
+            this.txtEmail.TabIndex = 1;
             // 
             // frmABMUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(422, 194);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.Label4);
             this.Controls.Add(this.txtConfirmarPass);
             this.Controls.Add(this.Label3);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.txtNombre);
@@ -156,9 +161,9 @@
         internal System.Windows.Forms.TextBox txtConfirmarPass;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.TextBox txtPassword;
-        internal System.Windows.Forms.MaskedTextBox txtEmail;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.TextBox txtNombre;
+        internal System.Windows.Forms.TextBox txtEmail;
     }
 }

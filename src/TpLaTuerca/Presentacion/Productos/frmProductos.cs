@@ -20,7 +20,7 @@ namespace TpLaTuerca.Presentacion.Productos
         public frmProductos()
         {
             InitializeComponent();
-           // InitializeDataGridView();
+            InitializeDataGridView();
             oProductoService = new ProductoService();
             oTipoUsoService = new TipoUsoService();
         }
@@ -52,16 +52,12 @@ namespace TpLaTuerca.Presentacion.Productos
 
             dgvProductos.Columns[6].Name = "Proveedor";
             dgvProductos.Columns[6].DataPropertyName = "Proveedor";
-
-
-
         }
 
         private void frmProducto_Load(object sender, EventArgs e)
         {
             this.CenterToParent();
             LlenarCombo(cboTipoUso,oTipoUsoService.ObtenerTodos(),"Nombre","CodTipoUso");
-            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -153,6 +149,13 @@ namespace TpLaTuerca.Presentacion.Productos
             frm.InicializarFormulario(frmDetalleProducto.FormMode.delete, prod);
             frm.ShowDialog();
             LLenarGrilla();
+        }
+
+        private void DgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnNuevo.Enabled = true;
+            btnActualizar.Enabled = true;
+            btnEliminar.Enabled = true;
         }
     }
 }

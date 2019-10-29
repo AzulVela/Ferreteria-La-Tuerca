@@ -18,13 +18,16 @@ namespace TpLaTuerca.Presentación.Proveedor
         public frmProveedores()
         {
             InitializeComponent();
-
+            InitializeDataGridView();
             oProveedorService = new ProveedorService();
         }
 
         private void Proveedores_Load(object sender, EventArgs e)
         {
             this.CenterToParent();
+
+            DataGridViewColumn ColumnaCod = dgvProveedores.Columns[0];
+            ColumnaCod.Visible = false;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -44,10 +47,10 @@ namespace TpLaTuerca.Presentación.Proveedor
             if (!chkTodos.Checked)
             {
                 if (txtNombre.Text != string.Empty)
-                    filtros.Add("Nombre", txtNombre.Text);
+                    filtros.Add("Nombre",'%'+txtNombre.Text+'%');
 
                 if (txtApellido.Text != string.Empty)
-                    filtros.Add("Apellido", txtApellido.Text);
+                    filtros.Add("Apellido",'%'+txtApellido.Text+'%');
 
                 if (filtros.Count > 0)
                     dgvProveedores.DataSource = oProveedorService.ConsultarConFiltros(filtros);
@@ -106,6 +109,39 @@ namespace TpLaTuerca.Presentación.Proveedor
             formulario.InicializarFormulario(frmABMProveedor.FormMode.delete, proveedor);
             formulario.ShowDialog();
             BtnConsultar_Click(sender, e);
+        }
+
+        private void DgvProveedores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnNuevo.Enabled = true;
+            btnActualizar.Enabled = true;
+            btnEliminar.Enabled = true;
+        }
+
+        private void InitializeDataGridView()
+        {
+            dgvProveedores.ColumnCount = 6;
+            dgvProveedores.ColumnHeadersVisible = true;
+
+            dgvProveedores.AutoGenerateColumns = false;
+
+            dgvProveedores.Columns[0].Name = "Codigo Proveedor";
+            dgvProveedores.Columns[0].DataPropertyName = "CodProveedor";
+
+            dgvProveedores.Columns[1].Name = "Apellido";
+            dgvProveedores.Columns[1].DataPropertyName = "Apellido";
+
+            dgvProveedores.Columns[2].Name = "Nombre";
+            dgvProveedores.Columns[2].DataPropertyName = "Nombre";
+
+            dgvProveedores.Columns[3].Name = "Direccion";
+            dgvProveedores.Columns[3].DataPropertyName = "Direccion";
+
+            dgvProveedores.Columns[4].Name = "Telefono";
+            dgvProveedores.Columns[4].DataPropertyName = "Telefono";
+
+            dgvProveedores.Columns[5].Name = "Tiempo de entrega";
+            dgvProveedores.Columns[5].DataPropertyName = "TiempoDeEntrega";
         }
     }
 }

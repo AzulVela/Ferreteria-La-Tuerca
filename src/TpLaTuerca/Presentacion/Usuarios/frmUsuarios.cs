@@ -21,6 +21,7 @@ namespace TpLaTuerca.Presentacion.Usuarios
         {
             oUsuarioService = new UsuarioService();
             InitializeComponent();
+            InitializeDataGridView();
         }
 
         private void BtnConsultar_Click(object sender, EventArgs e)
@@ -30,7 +31,7 @@ namespace TpLaTuerca.Presentacion.Usuarios
                 if (txtNombre.Text != string.Empty)
                 {
                     List<Usuario> usuario = new List<Usuario>();
-                    usuario.Add(oUsuarioService.ObtenerUsuario(txtNombre.Text));
+                    usuario.Add(oUsuarioService.ObtenerUsuario('%'+txtNombre.Text+'%'));
                     dgvUsuarios.DataSource = usuario;
                 }
 
@@ -82,6 +83,41 @@ namespace TpLaTuerca.Presentacion.Usuarios
             }
             else
                 txtNombre.Enabled = true;
+        }
+
+        private void FrmUsuarios_Load(object sender, EventArgs e)
+        {
+            this.CenterToParent();
+
+            DataGridViewColumn ColumnaID = dgvUsuarios.Columns[0];
+            ColumnaID.Visible = false;
+        }
+
+        private void DgvUsuarios_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            btnNuevo.Enabled = true;
+            btnActualizar.Enabled = true;
+            btnEliminar.Enabled = true;
+        }
+
+        private void InitializeDataGridView()
+        {
+            dgvUsuarios.ColumnCount = 4;
+            dgvUsuarios.ColumnHeadersVisible = true;
+
+            dgvUsuarios.AutoGenerateColumns = false;
+
+            dgvUsuarios.Columns[0].Name = "Id Usuario";
+            dgvUsuarios.Columns[0].DataPropertyName = "idUsuario";
+
+            dgvUsuarios.Columns[1].Name = "Nombre de usuario";
+            dgvUsuarios.Columns[1].DataPropertyName = "nombreUsuario";
+
+            dgvUsuarios.Columns[2].Name = "Email";
+            dgvUsuarios.Columns[2].DataPropertyName = "email";
+
+            dgvUsuarios.Columns[3].Name = "Password";
+            dgvUsuarios.Columns[3].DataPropertyName = "password";
         }
     }
 }

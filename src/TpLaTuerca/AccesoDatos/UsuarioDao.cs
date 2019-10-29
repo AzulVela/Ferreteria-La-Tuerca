@@ -16,7 +16,7 @@ namespace TpLaTuerca.AccesoDatos
                 //Construimos la consulta sql para buscar el usuario en la base de datos.
                 String strSql = string.Concat(" SELECT idUsuario, nombreUsuario, password, email",
                                               "   FROM Usuarios",
-                                              "  WHERE nombreUsuario =  @usuario AND habilitado = 1");
+                                              "  WHERE nombreUsuario LIKE @usuario AND habilitado = 1");
 
                 var parametros = new Dictionary<string, object>();
 

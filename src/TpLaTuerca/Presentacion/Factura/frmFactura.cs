@@ -35,16 +35,6 @@ namespace TpLaTuerca.Presentacion.Factura
 
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmFactura_Load(object sender, EventArgs e)
         {
             this.CenterToParent();
@@ -185,6 +175,11 @@ namespace TpLaTuerca.Presentacion.Factura
            // {
                // MessageBox.Show("Error al registrar la factura " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //}
+        }
+
+        private void DgvDetalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

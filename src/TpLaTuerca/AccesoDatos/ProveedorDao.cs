@@ -59,6 +59,26 @@ namespace TpLaTuerca.AccesoDatos
             return resultado == 1;
         }
 
+        internal object GetProveedor(Proveedor oProveedor)
+        {
+            var cod = oProveedor.CodProveedor;
+
+            String sql = "select CodProveedor, Apellido, Nombre, Direccion, Telefono, TiempoDeEntrega from Proveeodr where CodProveedor = @cod";
+
+            var param = new Dictionary<string, object>();
+
+            param.Add("cod", cod);
+
+            var resultado = DataManager.GetInstance().ConsultaSQLConParametros(sql, param);
+
+            if (resultado.Rows.Count > 0)
+            {
+                return ObjectMapping(resultado.Rows[0]);
+            }
+
+            return null;
+        }
+
         internal bool UpdateState(Proveedor oProveedorSelected)
         {
             String sql = "UPDATE proveedor SET habilitado = 0 WHERE CodProveedor = @cod";
@@ -88,11 +108,6 @@ namespace TpLaTuerca.AccesoDatos
             int resultado = DataManager.GetInstance().EjecutarSQL(sql, parametros);
 
             return resultado == 1;
-        }
-
-        internal object GetProveedor(string proveedor)
-        {
-            return null;
         }
 
         public IList<Proveedor> GetByFilters(Dictionary<string, object> parametros)

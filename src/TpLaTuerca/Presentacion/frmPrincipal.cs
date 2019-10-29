@@ -26,7 +26,7 @@ namespace TpLaTuerca
         private void Form1_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            frmLogin login = new frmLogin();
+            frmLogin login = new frmLogin(this);
             login.ShowDialog();
            
         }

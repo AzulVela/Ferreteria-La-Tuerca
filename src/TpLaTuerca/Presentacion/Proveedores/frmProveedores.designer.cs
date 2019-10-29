@@ -47,40 +47,43 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(344, 356);
+            this.btnSalir.Location = new System.Drawing.Point(348, 356);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 38);
-            this.btnSalir.TabIndex = 13;
+            this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.Location = new System.Drawing.Point(180, 356);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 38);
-            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnActualizar
             // 
+            this.btnActualizar.Enabled = false;
             this.btnActualizar.Location = new System.Drawing.Point(99, 356);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 38);
-            this.btnActualizar.TabIndex = 11;
+            this.btnActualizar.TabIndex = 6;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Enabled = false;
             this.btnNuevo.Location = new System.Drawing.Point(18, 356);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 38);
-            this.btnNuevo.TabIndex = 10;
+            this.btnNuevo.TabIndex = 5;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseMnemonic = false;
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -110,7 +113,7 @@
             this.chkTodos.Margin = new System.Windows.Forms.Padding(2);
             this.chkTodos.Name = "chkTodos";
             this.chkTodos.Size = new System.Drawing.Size(56, 17);
-            this.chkTodos.TabIndex = 11;
+            this.chkTodos.TabIndex = 2;
             this.chkTodos.Text = "Todos";
             this.chkTodos.UseVisualStyleBackColor = true;
             this.chkTodos.CheckedChanged += new System.EventHandler(this.ChkTodos_CheckedChanged);
@@ -120,7 +123,7 @@
             this.btnConsultar.Location = new System.Drawing.Point(332, 91);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(75, 26);
-            this.btnConsultar.TabIndex = 9;
+            this.btnConsultar.TabIndex = 3;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.BtnConsultar_Click);
@@ -146,9 +149,10 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(93, 31);
+            this.txtNombre.MaxLength = 20;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(193, 20);
-            this.txtNombre.TabIndex = 3;
+            this.txtNombre.TabIndex = 0;
             this.txtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
             // 
             // dgvProveedores
@@ -161,15 +165,17 @@
             this.dgvProveedores.ReadOnly = true;
             this.dgvProveedores.RowHeadersWidth = 62;
             this.dgvProveedores.Size = new System.Drawing.Size(405, 195);
-            this.dgvProveedores.TabIndex = 0;
+            this.dgvProveedores.TabIndex = 4;
+            this.dgvProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProveedores_CellClick);
             this.dgvProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProveedores_CellContentClick);
             // 
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(93, 68);
+            this.txtApellido.MaxLength = 20;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(193, 20);
-            this.txtApellido.TabIndex = 2;
+            this.txtApellido.TabIndex = 1;
             // 
             // frmProveedores
             // 

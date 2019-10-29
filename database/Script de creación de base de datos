@@ -84,9 +84,9 @@ GO
 CREATE TABLE [dbo].[Producto](
 	[CodProducto] [int] NOT NULL identity,
 	[Nombre] [varchar](20) NOT NULL,
-	[Descripcion] [varchar](30) NOT NULL,
+	[Descripcion] [varchar](30) NULL,
 	[CodTipoMedida] [int] NOT NULL,
-	[Precio] [float] NULL,
+	[Precio] [float] NOT NULL,
 	[CodTipoUso] [int] NOT NULL,
 	[CodProveedor] [int] NOT NULL,
 	[Habilitado] [bit] default 1
@@ -103,6 +103,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Proveedor](
 	[CodProveedor] [int] NOT NULL identity,
+	[Apellido] [varchar](20) NOT NULL,
 	[Apellido] [varchar](20) NOT NULL,
 	[Nombre] [varchar](20) NULL,
 	[Direccion] [varchar](50) NULL,
