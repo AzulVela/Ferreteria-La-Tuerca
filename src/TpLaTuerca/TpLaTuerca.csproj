@@ -97,6 +97,12 @@
       <DependentUpon>frmFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="LogicaNegocio\TipoFacturaService.cs" />
+    <Compile Include="Presentacion\Factura\frmListaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Factura\frmListaProductos.Designer.cs">
+      <DependentUpon>frmListaProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Factura\frmFactura.resx">
       <DependentUpon>frmFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Factura\frmListaProductos.resx">
+      <DependentUpon>frmListaProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
