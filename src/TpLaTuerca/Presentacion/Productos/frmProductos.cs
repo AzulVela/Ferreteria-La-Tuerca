@@ -153,7 +153,6 @@ namespace TpLaTuerca.Presentacion.Productos
 
         private void DgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnNuevo.Enabled = true;
             btnActualizar.Enabled = true;
             btnEliminar.Enabled = true;
         }

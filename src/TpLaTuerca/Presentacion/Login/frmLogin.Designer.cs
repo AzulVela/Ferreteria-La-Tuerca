@@ -50,7 +50,6 @@
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario:";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // label2
             // 
@@ -69,7 +68,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(163, 20);
             this.txtUsuario.TabIndex = 0;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // txtContraseña
@@ -80,7 +78,6 @@
             this.txtContraseña.Size = new System.Drawing.Size(163, 20);
             this.txtContraseña.TabIndex = 1;
             this.txtContraseña.UseSystemPasswordChar = true;
-            this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
             // 
             // btnIngresar
@@ -93,7 +90,6 @@
             this.btnIngresar.Text = "&Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.Button1_Click);
-            this.btnIngresar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnIngresar_MouseClick);
             // 
             // btnCancelar
             // 
@@ -114,7 +110,6 @@
             this.lblfecha.Size = new System.Drawing.Size(35, 13);
             this.lblfecha.TabIndex = 6;
             this.lblfecha.Text = "label3";
-            this.lblfecha.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblhora
             // 
@@ -146,8 +141,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
-            this.Text = "Inicio De Sesión";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmLogin_FormClosing);
+            this.Text = "Inicio de Sesión";
+  //          this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmLogin_FormClosing);
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

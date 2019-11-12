@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFactura));
             this.cboTipoFactura = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,7 +65,7 @@
             // 
             this.cboTipoFactura.FormattingEnabled = true;
             this.cboTipoFactura.Location = new System.Drawing.Point(92, 13);
-            this.cboTipoFactura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboTipoFactura.Margin = new System.Windows.Forms.Padding(2);
             this.cboTipoFactura.Name = "cboTipoFactura";
             this.cboTipoFactura.Size = new System.Drawing.Size(82, 21);
             this.cboTipoFactura.TabIndex = 0;
@@ -93,7 +94,7 @@
             // 
             this.cboCliente.FormattingEnabled = true;
             this.cboCliente.Location = new System.Drawing.Point(225, 13);
-            this.cboCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboCliente.Margin = new System.Windows.Forms.Padding(2);
             this.cboCliente.Name = "cboCliente";
             this.cboCliente.Size = new System.Drawing.Size(82, 21);
             this.cboCliente.TabIndex = 1;
@@ -112,7 +113,7 @@
             // 
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(613, 11);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(108, 20);
             this.dtpFecha.TabIndex = 99;
@@ -131,7 +132,7 @@
             // 
             this.cboVendedor.FormattingEnabled = true;
             this.cboVendedor.Location = new System.Drawing.Point(380, 12);
-            this.cboVendedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboVendedor.Margin = new System.Windows.Forms.Padding(2);
             this.cboVendedor.Name = "cboVendedor";
             this.cboVendedor.Size = new System.Drawing.Size(82, 21);
             this.cboVendedor.TabIndex = 2;
@@ -152,9 +153,9 @@
             this.dpbDetalle.Controls.Add(this.label5);
             this.dpbDetalle.Controls.Add(this.cboProducto);
             this.dpbDetalle.Location = new System.Drawing.Point(8, 58);
-            this.dpbDetalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dpbDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.dpbDetalle.Name = "dpbDetalle";
-            this.dpbDetalle.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dpbDetalle.Padding = new System.Windows.Forms.Padding(2);
             this.dpbDetalle.Size = new System.Drawing.Size(712, 277);
             this.dpbDetalle.TabIndex = 8;
             this.dpbDetalle.TabStop = false;
@@ -173,7 +174,7 @@
             // txtTotal
             // 
             this.txtTotal.Location = new System.Drawing.Point(629, 246);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(68, 20);
             this.txtTotal.TabIndex = 20;
@@ -181,7 +182,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(207, 24);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(68, 20);
             this.txtCantidad.TabIndex = 4;
@@ -199,7 +200,7 @@
             this.precio,
             this.importe});
             this.dgvDetalle.Location = new System.Drawing.Point(7, 60);
-            this.dgvDetalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDetalle.Name = "dgvDetalle";
             this.dgvDetalle.ReadOnly = true;
             this.dgvDetalle.RowHeadersWidth = 62;
@@ -247,30 +248,27 @@
             // 
             // btnQuitarItem
             // 
-            this.btnQuitarItem.Image = global::TpLaTuerca.Properties.Resources.eliminar;
-            this.btnQuitarItem.Location = new System.Drawing.Point(663, 17);
-            this.btnQuitarItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuitarItem.Image = ((System.Drawing.Image)(resources.GetObject("btnQuitarItem.Image")));
+            this.btnQuitarItem.Location = new System.Drawing.Point(654, 17);
+            this.btnQuitarItem.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuitarItem.Name = "btnQuitarItem";
-            this.btnQuitarItem.Size = new System.Drawing.Size(33, 31);
+            this.btnQuitarItem.Size = new System.Drawing.Size(42, 38);
             this.btnQuitarItem.TabIndex = 17;
             this.btnQuitarItem.UseVisualStyleBackColor = true;
             this.btnQuitarItem.Click += new System.EventHandler(this.BtnQuitarItem_Click);
             // 
             // btnAgregarItem
             // 
-            this.btnAgregarItem.Image = global::TpLaTuerca.Properties.Resources.agregar;
-            this.btnAgregarItem.Location = new System.Drawing.Point(623, 17);
-            this.btnAgregarItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarItem.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarItem.Image")));
+            this.btnAgregarItem.Location = new System.Drawing.Point(605, 17);
             this.btnAgregarItem.Name = "btnAgregarItem";
-            this.btnAgregarItem.Size = new System.Drawing.Size(33, 31);
-            this.btnAgregarItem.TabIndex = 5;
-            this.btnAgregarItem.UseVisualStyleBackColor = true;
-            this.btnAgregarItem.Click += new System.EventHandler(this.BtnAgregarItem_Click);
+            this.btnAgregarItem.Size = new System.Drawing.Size(44, 38);
+            this.btnAgregarItem.TabIndex = 22;
             // 
             // txtImporte
             // 
             this.txtImporte.Location = new System.Drawing.Point(477, 24);
-            this.txtImporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtImporte.Margin = new System.Windows.Forms.Padding(2);
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.Size = new System.Drawing.Size(68, 20);
             this.txtImporte.TabIndex = 15;
@@ -278,7 +276,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(344, 25);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(68, 20);
             this.txtPrecio.TabIndex = 14;
@@ -327,7 +325,7 @@
             // 
             this.cboProducto.FormattingEnabled = true;
             this.cboProducto.Location = new System.Drawing.Point(59, 24);
-            this.cboProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboProducto.Margin = new System.Windows.Forms.Padding(2);
             this.cboProducto.Name = "cboProducto";
             this.cboProducto.Size = new System.Drawing.Size(82, 21);
             this.cboProducto.TabIndex = 3;
@@ -336,7 +334,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(538, 339);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 29);
             this.btnCancelar.TabIndex = 6;
@@ -348,7 +346,7 @@
             // 
             this.btnGuardar.AutoEllipsis = true;
             this.btnGuardar.Location = new System.Drawing.Point(625, 339);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(80, 29);
             this.btnGuardar.TabIndex = 7;
@@ -372,9 +370,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboTipoFactura);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmFactura";
-            this.Text = "NuevaFactura";
+            this.Text = "Nueva Factura";
             this.Load += new System.EventHandler(this.FrmFactura_Load);
             this.dpbDetalle.ResumeLayout(false);
             this.dpbDetalle.PerformLayout();

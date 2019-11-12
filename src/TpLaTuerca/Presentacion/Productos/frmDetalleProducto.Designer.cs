@@ -107,7 +107,7 @@
             this.cboProveedores.Controls.Add(this.label2);
             this.cboProveedores.Location = new System.Drawing.Point(4, 22);
             this.cboProveedores.Name = "cboProveedores";
-            this.cboProveedores.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.cboProveedores.Padding = new System.Windows.Forms.Padding(3);
             this.cboProveedores.Size = new System.Drawing.Size(382, 307);
             this.cboProveedores.TabIndex = 0;
             this.cboProveedores.Text = "Detalle";
@@ -179,7 +179,7 @@
             // 
             this.cboProveedor.FormattingEnabled = true;
             this.cboProveedor.Location = new System.Drawing.Point(105, 149);
-            this.cboProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.cboProveedor.Name = "cboProveedor";
             this.cboProveedor.Size = new System.Drawing.Size(193, 21);
             this.cboProveedor.TabIndex = 5;
@@ -284,7 +284,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDetalleProducto";
-            this.Text = "Detalle Producto";
+            this.Text = "ABMProducto";
             this.Load += new System.EventHandler(this.FrmDetalleProducto_Load);
             this.tbcDetalle.ResumeLayout(false);
             this.cboProveedores.ResumeLayout(false);

@@ -26,15 +26,15 @@ namespace TpLaTuerca
         private void Form1_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            frmLogin login = new frmLogin(this);
-            login.ShowDialog();
+           // frmLogin login = new frmLogin(this);
+            //login.ShowDialog();
            
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-            frmClientes cliente = new frmClientes();
-            cliente.Show();
+            frmProductos producto = new frmProductos();
+            producto.Show();
         }
 
         private void btnProveedor_Click(object sender, EventArgs e)
@@ -45,8 +45,8 @@ namespace TpLaTuerca
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
-            frmProductos producto = new frmProductos();
-            producto.Show();
+            frmClientes cliente = new frmClientes();
+            cliente.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
