@@ -21,8 +21,10 @@ namespace TpLaTuerca.Presentacion.Factura
         private readonly ProductoService oProductoService;
         private readonly FacturaService oFacturaService;
         frmListaProductos lista;
+        CuentaCorrienteService oCuentaCorrienteService;
 
         Producto productoSeleccionado;
+
         public frmFactura()
         {
             InitializeComponent();
@@ -36,6 +38,7 @@ namespace TpLaTuerca.Presentacion.Factura
             lstDetalles = new BindingList<DetalleFactura>();
 
             productoSeleccionado = new Producto();
+            oCuentaCorrienteService = new CuentaCorrienteService();
         }
 
         private void FrmFactura_Load(object sender, EventArgs e)
@@ -170,7 +173,13 @@ namespace TpLaTuerca.Presentacion.Factura
 
                 if (oFacturaService.ValidarDatos(factura))
                 {
-                    oFacturaService.Crear(factura);
+                    if (rdbCorriente.Checked)
+                    {
+                        //Con fiado
+                        oFacturaService.Crear(factura, true);
+                    }
+                    else
+                        oFacturaService.Crear(factura, false);
 
                     MessageBox.Show(string.Concat("La factura nro: ", factura.NroFactura, " se generó correctamente."), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

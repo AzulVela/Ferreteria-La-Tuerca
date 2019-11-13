@@ -23,13 +23,12 @@ namespace TpLaTuerca.LogicaNegocio
             {
                 throw new Exception("Debe ingresar al menos un detalle");
             }
-
             return true;
         }
 
-        internal void Crear(Factura factura)
+        internal void Crear(Factura factura, bool var)
         {
-            oFacturaDao.Create(factura);
+            oFacturaDao.Create(factura, var);
         }
     }
 }

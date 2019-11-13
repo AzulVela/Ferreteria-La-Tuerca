@@ -95,7 +95,6 @@ namespace TpLaTuerca.Presentacion.Factura
             factura_.TomaProducto();
             this.Close();
         }
-
     }
     
 }

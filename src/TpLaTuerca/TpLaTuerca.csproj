@@ -59,6 +59,7 @@
     <Compile Include="AccesoDatos\UsuarioDao.cs" />
     <Compile Include="AccesoDatos\VendedorDao.cs" />
     <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\CuentaCorriente.cs" />
     <Compile Include="Entidades\DetalleFactura.cs" />
     <Compile Include="Entidades\Estructura.cs" />
     <Compile Include="Entidades\Factura.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Entidades\Vendedor.cs" />
     <Compile Include="LogicaNegocio\ClienteService.cs" />
+    <Compile Include="LogicaNegocio\CuentaCorrienteService.cs" />
     <Compile Include="LogicaNegocio\FacturaService.cs" />
     <Compile Include="LogicaNegocio\ProductoService.cs" />
     <Compile Include="LogicaNegocio\ProveedorService.cs" />

@@ -38,6 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cboVendedor = new System.Windows.Forms.ComboBox();
             this.dpbDetalle = new System.Windows.Forms.GroupBox();
+            this.txtProducto = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -57,9 +58,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.txtProducto = new System.Windows.Forms.TextBox();
+            this.rdbContado = new System.Windows.Forms.RadioButton();
+            this.rdbCorriente = new System.Windows.Forms.RadioButton();
             this.dpbDetalle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             this.SuspendLayout();
@@ -163,6 +163,15 @@
             this.dpbDetalle.TabIndex = 8;
             this.dpbDetalle.TabStop = false;
             this.dpbDetalle.Text = "Detalle";
+            // 
+            // txtProducto
+            // 
+            this.txtProducto.Location = new System.Drawing.Point(62, 42);
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.Size = new System.Drawing.Size(82, 20);
+            this.txtProducto.TabIndex = 23;
+            this.txtProducto.TextChanged += new System.EventHandler(this.TxtProducto_TextChanged);
+            this.txtProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtProducto_KeyPress);
             // 
             // label9
             // 
@@ -357,45 +366,36 @@
             this.label10.TabIndex = 100;
             this.label10.Text = "Tipo de Pago:";
             // 
-            // radioButton1
+            // rdbContado
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(93, 54);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(65, 17);
-            this.radioButton1.TabIndex = 101;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Contado";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
+            this.rdbContado.AutoSize = true;
+            this.rdbContado.Location = new System.Drawing.Point(93, 54);
+            this.rdbContado.Name = "rdbContado";
+            this.rdbContado.Size = new System.Drawing.Size(65, 17);
+            this.rdbContado.TabIndex = 101;
+            this.rdbContado.TabStop = true;
+            this.rdbContado.Text = "Contado";
+            this.rdbContado.UseVisualStyleBackColor = true;
+            this.rdbContado.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
-            // radioButton2
+            // rdbCorriente
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(180, 52);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(104, 17);
-            this.radioButton2.TabIndex = 102;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Cuenta Corriente";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // txtProducto
-            // 
-            this.txtProducto.Location = new System.Drawing.Point(62, 42);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(82, 20);
-            this.txtProducto.TabIndex = 23;
-            this.txtProducto.TextChanged += new System.EventHandler(this.TxtProducto_TextChanged);
-            this.txtProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtProducto_KeyPress);
+            this.rdbCorriente.AutoSize = true;
+            this.rdbCorriente.Location = new System.Drawing.Point(180, 52);
+            this.rdbCorriente.Name = "rdbCorriente";
+            this.rdbCorriente.Size = new System.Drawing.Size(104, 17);
+            this.rdbCorriente.TabIndex = 102;
+            this.rdbCorriente.TabStop = true;
+            this.rdbCorriente.Text = "Cuenta Corriente";
+            this.rdbCorriente.UseVisualStyleBackColor = true;
             // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 467);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rdbCorriente);
+            this.Controls.Add(this.rdbContado);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
@@ -451,8 +451,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn importe;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rdbContado;
+        private System.Windows.Forms.RadioButton rdbCorriente;
         private System.Windows.Forms.TextBox txtProducto;
     }
 }

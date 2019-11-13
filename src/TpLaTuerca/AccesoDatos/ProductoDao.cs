@@ -189,7 +189,6 @@ namespace TpLaTuerca.AccesoDatos
                     CodProveedor = Convert.ToInt32(row["CodProveedor"].ToString()),
                     Nombre = row["NombrePR"].ToString()
                 }
-
             };
 
             return oProducto;

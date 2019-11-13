@@ -24,16 +24,18 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Detalle_Factura](
+	[IdDetalleFactura] [int] NOT NULL,
 	[NroFactura] [int] NOT NULL,
 	[CodTipoFactura] [int] NOT NULL,
 	[CodProducto] [int] NOT NULL,
 	[Cantidad] [int] NULL,
 	[Precio] [float] NULL,
  CONSTRAINT [PK_Detalle_Factura] PRIMARY KEY CLUSTERED 
+ 
 (
 	[NroFactura] ASC,
 	[CodTipoFactura] ASC,
-	[CodProducto] ASC
+	[IdDetalleFactura] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -66,7 +68,7 @@ CREATE TABLE [dbo].[Factura](
 	[CodTipoDocV] [int] NOT NULL,
 	[NroTipoDocV] [int] NOT NULL,
 	[Fecha] [datetime] NULL,
- CONSTRAINT [PK_Factura] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_Factura] PRIMARY KEY CLUSTERED
 (
 	[NroFactura] ASC,
 	[CodTipoFactura] ASC
@@ -253,7 +255,7 @@ NroFactura int not null,
 CodTipoFactura int not null,
 CodCliente int not null,
 habilitado bit default 1,
-CONSTRAINT [FK_Factura] FOREIGN KEY([NroFactura], [CodTipoFactura])
+CONSTRAINT [FK_Factura_CuentaCorriente] FOREIGN KEY([NroFactura], [CodTipoFactura])
 REFERENCES [dbo].[Factura] ([NroFactura], [CodTipoFactura]),
 CONSTRAINT [FK_Cliente] FOREIGN KEY([CodCliente])
 REFERENCES [dbo].[Cliente] ([CodCliente])

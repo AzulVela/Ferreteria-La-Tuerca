@@ -9,7 +9,7 @@ namespace TpLaTuerca.AccesoDatos
 {
     class FacturaDao
     {
-        internal bool Create(Factura factura)
+        internal bool Create(Factura factura, bool var)
         {
             DataManager dm = new DataManager();
            try
@@ -29,10 +29,14 @@ namespace TpLaTuerca.AccesoDatos
                 var resultado = dm.EjecutarSQL(sql, prs);
                 var idFactura = dm.ConsultaSQLScalar("select @@identity");
 
-                string sql2 = "insert into detalle_factura values (@idFactura,@codTipoFact,@codProducto,@cant,@precio)";
+                string sql2 = "insert into detalle_factura values (@idDetalle,@idFactura,@codTipoFact,@codProducto,@cant,@precio)";
+                string idDetalle = "1";
+                int idDetalle_int = 1;
+
                 foreach (var detalle in factura.DetalleFactura)
                 {
                     var prs2 = new Dictionary<string, object>();
+                    prs2.Add("idDetalle", idDetalle);
                     prs2.Add("idFactura", idFactura);
                     prs2.Add("codTipoFact", factura.TipoFactura.CodTipoFactura);
                     prs2.Add("codProducto", detalle.Producto.CodProducto);
@@ -40,10 +44,24 @@ namespace TpLaTuerca.AccesoDatos
                     prs2.Add("precio", detalle.Precio);
 
                     dm.EjecutarSQL(sql2, prs2);
+
+                    idDetalle_int ++;
+                    idDetalle = idDetalle_int.ToString();
+                }
+
+                if (var)
+                {
+                    string sql3 = "INSERT INTO Cuenta_Corriente values (@NroFactura,@CodTipoFactura,@CodCliente,default)";
+
+                    var prs3 = new Dictionary<string, object>();
+                    prs3.Add("NroFactura", idFactura);
+                    prs3.Add("CodTipoFactura", factura.TipoFactura.CodTipoFactura);
+                    prs3.Add("CodCliente", factura.Cliente.CodCliente);
+
+                    dm.EjecutarSQL(sql3, prs3);
                 }
 
                 dm.Commit();
-
            }
 
            catch (Exception ex)
@@ -56,8 +74,6 @@ namespace TpLaTuerca.AccesoDatos
            {
                 dm.Close();
            }
-
-
             return true;
         }
     }
