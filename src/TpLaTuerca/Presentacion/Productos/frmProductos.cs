@@ -57,6 +57,7 @@ namespace TpLaTuerca.Presentacion.Productos
         private void frmProducto_Load(object sender, EventArgs e)
         {
             this.CenterToParent();
+            btnNuevo.Enabled = true;
             LlenarCombo(cboTipoUso,oTipoUsoService.ObtenerTodos(),"Nombre","CodTipoUso");
         }
 

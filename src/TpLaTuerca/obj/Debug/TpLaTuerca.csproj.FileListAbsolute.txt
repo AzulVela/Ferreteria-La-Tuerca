@@ -116,3 +116,4 @@ C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA-PROYECTO\Ferr
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA-PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.exe
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA-PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.pdb
 C:\Users\Ernesto\Desktop\PAVVV\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Factura.frmFactura.resources
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Factura.frmBusquedaProducto.resources

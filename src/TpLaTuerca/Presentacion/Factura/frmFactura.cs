@@ -181,5 +181,11 @@ namespace TpLaTuerca.Presentacion.Factura
         {
 
         }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBusquedaProducto frm = new frmBusquedaProducto();
+            frm.ShowDialog();
+        }
     }
 }
