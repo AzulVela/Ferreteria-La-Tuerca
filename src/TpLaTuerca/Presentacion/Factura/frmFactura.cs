@@ -181,7 +181,9 @@ namespace TpLaTuerca.Presentacion.Factura
                     else
                         oFacturaService.Crear(factura, false);
 
-                    MessageBox.Show(string.Concat("La factura nro: ", factura.NroFactura, " se generó correctamente."), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string nroFactura = oFacturaService.BuscarAlMayor();
+
+                    MessageBox.Show(string.Concat("La factura nro: ", nroFactura, " se generó correctamente."), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     btnAgregarItem.Enabled = false;
                     cboTipoFactura.SelectedIndex = -1;

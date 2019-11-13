@@ -169,7 +169,7 @@
             this.txtProducto.Location = new System.Drawing.Point(62, 42);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(82, 20);
-            this.txtProducto.TabIndex = 23;
+            this.txtProducto.TabIndex = 5;
             this.txtProducto.TextChanged += new System.EventHandler(this.TxtProducto_TextChanged);
             this.txtProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtProducto_KeyPress);
             // 
@@ -197,7 +197,7 @@
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(68, 20);
-            this.txtCantidad.TabIndex = 4;
+            this.txtCantidad.TabIndex = 6;
             this.txtCantidad.Leave += new System.EventHandler(this.TxtCantidad_Leave);
             // 
             // dgvDetalle
@@ -265,7 +265,7 @@
             this.btnQuitarItem.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuitarItem.Name = "btnQuitarItem";
             this.btnQuitarItem.Size = new System.Drawing.Size(42, 38);
-            this.btnQuitarItem.TabIndex = 17;
+            this.btnQuitarItem.TabIndex = 8;
             this.btnQuitarItem.UseVisualStyleBackColor = true;
             this.btnQuitarItem.Click += new System.EventHandler(this.BtnQuitarItem_Click);
             // 
@@ -275,7 +275,7 @@
             this.btnAgregarItem.Location = new System.Drawing.Point(605, 36);
             this.btnAgregarItem.Name = "btnAgregarItem";
             this.btnAgregarItem.Size = new System.Drawing.Size(44, 38);
-            this.btnAgregarItem.TabIndex = 22;
+            this.btnAgregarItem.TabIndex = 7;
             this.btnAgregarItem.Click += new System.EventHandler(this.BtnAgregarItem_Click);
             // 
             // txtImporte
@@ -340,7 +340,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 29);
-            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
@@ -352,7 +352,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(80, 29);
-            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
@@ -372,7 +372,7 @@
             this.rdbContado.Location = new System.Drawing.Point(93, 54);
             this.rdbContado.Name = "rdbContado";
             this.rdbContado.Size = new System.Drawing.Size(65, 17);
-            this.rdbContado.TabIndex = 101;
+            this.rdbContado.TabIndex = 3;
             this.rdbContado.TabStop = true;
             this.rdbContado.Text = "Contado";
             this.rdbContado.UseVisualStyleBackColor = true;
@@ -384,7 +384,7 @@
             this.rdbCorriente.Location = new System.Drawing.Point(180, 52);
             this.rdbCorriente.Name = "rdbCorriente";
             this.rdbCorriente.Size = new System.Drawing.Size(104, 17);
-            this.rdbCorriente.TabIndex = 102;
+            this.rdbCorriente.TabIndex = 4;
             this.rdbCorriente.TabStop = true;
             this.rdbCorriente.Text = "Cuenta Corriente";
             this.rdbCorriente.UseVisualStyleBackColor = true;

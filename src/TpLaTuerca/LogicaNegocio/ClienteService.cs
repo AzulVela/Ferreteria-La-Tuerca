@@ -8,7 +8,7 @@ using TpLaTuerca.Entidades;
 
 namespace TpLaTuerca.LogicaNegocio
 {
-    class ClienteService
+    public class ClienteService
     {
         private ClienteDao oClienteDao;
         public ClienteService()

@@ -11,16 +11,21 @@ namespace TpLaTuerca.LogicaNegocio
 
     public class CuentaCorrienteService
     {
-        // oCuentaCorrienteDao;
+        public CuentaCorrienteDao oCuentaCorrienteDao;
 
         public CuentaCorrienteService()
         {
-            //oCuentaCorrienteDao = new CuentaCorrienteDao();
+            oCuentaCorrienteDao = new CuentaCorrienteDao();
         }
 
-        //internal bool CrearFiado(CuentaCorriente cuenta)
-        //{
-        //  return oCuentaCorrienteDao.CrearFiado(cuenta);
-        //}
+        internal List<ResumenCuentCte> ObtenerCuentaCliente(Cliente oClienteSeleccionado)
+        {
+            return oCuentaCorrienteDao.ObtenerCuentaCliente(oClienteSeleccionado);
+        }
+
+        internal bool UpdateEstado(ResumenCuentCte resumen)
+        {
+            return oCuentaCorrienteDao.UpdateEstado(resumen);
+        }
     }
 }

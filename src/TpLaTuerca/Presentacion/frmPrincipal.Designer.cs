@@ -42,6 +42,7 @@
             this.btnProveedor = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnCuentaCorriente = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,6 +128,7 @@
             // 
             this.btnProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProveedor.Image = ((System.Drawing.Image)(resources.GetObject("btnProveedor.Image")));
+            this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnProveedor.Location = new System.Drawing.Point(12, 159);
             this.btnProveedor.Name = "btnProveedor";
             this.btnProveedor.Size = new System.Drawing.Size(122, 120);
@@ -155,12 +157,27 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
+            // btnCuentaCorriente
+            // 
+            this.btnCuentaCorriente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCuentaCorriente.Image = ((System.Drawing.Image)(resources.GetObject("btnCuentaCorriente.Image")));
+            this.btnCuentaCorriente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCuentaCorriente.Location = new System.Drawing.Point(12, 411);
+            this.btnCuentaCorriente.Name = "btnCuentaCorriente";
+            this.btnCuentaCorriente.Size = new System.Drawing.Size(122, 120);
+            this.btnCuentaCorriente.TabIndex = 27;
+            this.btnCuentaCorriente.Text = "CUENTA CTE";
+            this.btnCuentaCorriente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCuentaCorriente.UseVisualStyleBackColor = true;
+            this.btnCuentaCorriente.Click += new System.EventHandler(this.BtnCuentaCorriente_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(840, 452);
+            this.ClientSize = new System.Drawing.Size(840, 559);
+            this.Controls.Add(this.btnCuentaCorriente);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnProveedor);
             this.Controls.Add(this.btnProducto);
@@ -193,6 +210,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripMenuItem transaccionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem;
+        private System.Windows.Forms.Button btnCuentaCorriente;
     }
 }
 

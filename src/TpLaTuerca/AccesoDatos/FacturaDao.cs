@@ -76,5 +76,14 @@ namespace TpLaTuerca.AccesoDatos
            }
             return true;
         }
+
+        internal string BuscarAlMayor()
+        {
+            string sql = "select max(NroFactura) from factura";
+
+            string resultado = DataManager.GetInstance().ConsultaSQL(sql).Rows[0].ItemArray[0].ToString();
+
+            return resultado;
+        }
     }
 }

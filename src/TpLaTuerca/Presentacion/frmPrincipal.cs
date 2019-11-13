@@ -13,6 +13,7 @@ using TpLaTuerca.Presentación.Cliente;
 using TpLaTuerca.Presentación.Login;
 using TpLaTuerca.Presentacion.Usuarios;
 using TpLaTuerca.Presentacion.Factura;
+using TpLaTuerca.Presentacion.Cuenta_Corriente;
 
 namespace TpLaTuerca
 {
@@ -82,6 +83,12 @@ namespace TpLaTuerca
         {
             frmFactura fac = new frmFactura();
             fac.ShowDialog();
+        }
+
+        private void BtnCuentaCorriente_Click(object sender, EventArgs e)
+        {
+            frmCuentaCorriente cuenta = new frmCuentaCorriente();
+            cuenta.ShowDialog();
         }
     }
 }

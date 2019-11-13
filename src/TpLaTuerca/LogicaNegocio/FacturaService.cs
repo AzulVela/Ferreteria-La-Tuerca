@@ -30,5 +30,10 @@ namespace TpLaTuerca.LogicaNegocio
         {
             oFacturaDao.Create(factura, var);
         }
+
+        internal string BuscarAlMayor()
+        {
+            return oFacturaDao.BuscarAlMayor();
+        }
     }
 }

@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos\ClienteDao.cs" />
+    <Compile Include="AccesoDatos\CuentaCorrienteDao.cs" />
     <Compile Include="AccesoDatos\DataManager.cs" />
     <Compile Include="AccesoDatos\FacturaDao.cs" />
     <Compile Include="AccesoDatos\ProductoDao.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Entidades\Factura.cs" />
     <Compile Include="Entidades\Producto.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
+    <Compile Include="Entidades\ResumenCuentCte.cs" />
     <Compile Include="Entidades\TipoDoc.cs" />
     <Compile Include="Entidades\TipoFactura.cs" />
     <Compile Include="Entidades\TipoMedida.cs" />
@@ -91,6 +93,18 @@
     </Compile>
     <Compile Include="Presentacion\Clientes\frmClientes.designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Cuenta_Corriente\frmCuentaCorriente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Cuenta_Corriente\frmCuentaCorriente.Designer.cs">
+      <DependentUpon>frmCuentaCorriente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Cuenta_Corriente\frmListaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Cuenta_Corriente\frmListaClientes.Designer.cs">
+      <DependentUpon>frmListaClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Factura\frmFactura.cs">
       <SubType>Form</SubType>
@@ -160,6 +174,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Clientes\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Cuenta_Corriente\frmCuentaCorriente.resx">
+      <DependentUpon>frmCuentaCorriente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Cuenta_Corriente\frmListaClientes.resx">
+      <DependentUpon>frmListaClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Factura\frmFactura.resx">
       <DependentUpon>frmFactura.cs</DependentUpon>
