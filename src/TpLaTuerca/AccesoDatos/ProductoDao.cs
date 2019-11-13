@@ -40,6 +40,11 @@ namespace TpLaTuerca.AccesoDatos
                 sql += "and tu.codtipouso = @idTipoUso";
             }
 
+            if (filtros.ContainsKey("Nombre"))
+            {
+                sql += "and p.Nombre LIKE @Nombre";
+            }
+
             var resultado = DataManager.GetInstance().ConsultaSQLConParametros(sql, filtros);
 
             foreach (DataRow row in resultado.Rows)
@@ -184,7 +189,6 @@ namespace TpLaTuerca.AccesoDatos
                     CodProveedor = Convert.ToInt32(row["CodProveedor"].ToString()),
                     Nombre = row["NombrePR"].ToString()
                 }
-
             };
 
             return oProducto;

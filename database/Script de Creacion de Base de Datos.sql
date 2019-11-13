@@ -1,6 +1,3 @@
-ï»¿create database tp_latuerca
-go
-
 USE [Tp_LaTuerca]
 GO
 /****** Object:  Table [dbo].[Cliente]    Script Date: 12-Sep-19 18:09:44 ******/
@@ -27,16 +24,18 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Detalle_Factura](
+	[IdDetalleFactura] [int] NOT NULL,
 	[NroFactura] [int] NOT NULL,
 	[CodTipoFactura] [int] NOT NULL,
 	[CodProducto] [int] NOT NULL,
 	[Cantidad] [int] NULL,
 	[Precio] [float] NULL,
  CONSTRAINT [PK_Detalle_Factura] PRIMARY KEY CLUSTERED 
+ 
 (
 	[NroFactura] ASC,
 	[CodTipoFactura] ASC,
-	[CodProducto] ASC
+	[IdDetalleFactura] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -69,7 +68,7 @@ CREATE TABLE [dbo].[Factura](
 	[CodTipoDocV] [int] NOT NULL,
 	[NroTipoDocV] [int] NOT NULL,
 	[Fecha] [datetime] NULL,
- CONSTRAINT [PK_Factura] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_Factura] PRIMARY KEY CLUSTERED
 (
 	[NroFactura] ASC,
 	[CodTipoFactura] ASC
@@ -250,6 +249,21 @@ habilitado bit default 1);
 
 go
 
+CREATE TABLE Cuenta_Corriente
+(idCuentaCorriente int primary key identity,
+NroFactura int not null,
+CodTipoFactura int not null,
+CodCliente int not null,
+habilitado bit default 1,
+CONSTRAINT [FK_Factura_CuentaCorriente] FOREIGN KEY([NroFactura], [CodTipoFactura])
+REFERENCES [dbo].[Factura] ([NroFactura], [CodTipoFactura]),
+CONSTRAINT [FK_Cliente] FOREIGN KEY([CodCliente])
+REFERENCES [dbo].[Cliente] ([CodCliente])
+);
+
+
+go
+
 insert into usuarios values
 ('AVela','75865','azul.vela.junio@gmail.com',1),
 ('SDemasi','76726','',1),
@@ -259,30 +273,30 @@ insert into usuarios values
 insert into tipo_medida values
 ('Metros','Medida de longitud'),
 ('Metros cuadrados','Medida de superficie'),
-('Metros cÃºbicos','Medida de volÃºmen'),
+('Metros cúbicos','Medida de volúmen'),
 ('Kg','Medida de masa'),
 ('N/A','Herramental/Maquinaria'),
 ('Unidad','Producto/insumo por unidad');
 
 insert into tipo_uso values
-('General','Herramienta/insumo de propÃ³sito general'),
-('AlbaÃ±ilerÃ­a','Herramienta/insumo de albaÃ±ilerÃ­a'),
-('CarpinterÃ­a','Herramienta/insumo de carpinterÃ­a'),
-('Producto terminado','Producto fabricado por la ferreterÃ­a con insumos propios');
+('General','Herramienta/insumo de propósito general'),
+('Albañilería','Herramienta/insumo de albañilería'),
+('Carpintería','Herramienta/insumo de carpintería'),
+('Producto terminado','Producto fabricado por la ferretería con insumos propios');
 
 insert into proveedor values 
 ('Ferro','Cons','Duarte Quiroz 621','351-2293485',30,1),
-('Zara','Te','Av. ColÃ³n 829','351-2397372',15,1),
-('Falco','Hnos.','AcuÃ±a 81','3571-648292',20,1),
-('FabricaciÃ³n propia','FabricaciÃ³n propia',null,null,null,1);
+('Zara','Te','Av. Colón 829','351-2397372',15,1),
+('Falco','Hnos.','Acuña 81','3571-648292',20,1),
+('Fabricación propia','Fabricación propia',null,null,null,1);
 
 
 insert into producto values 
 ('Amoladora','Herramienta',5,3000,1,1,1),
-('Hormigonera','Maquinaria albaÃ±ilerÃ­a',5,10000,2,2,1),
+('Hormigonera','Maquinaria albañilería',5,10000,2,2,1),
 ('Clavo corto','Clavo 4cm',6,0.24,1,3,1),
 ('Clavo largo','Clavo 7cm',6,0.40,1,3,1),
-('Placa Madera','Insumo de carpinterÃ­a',2,500,3,2,1),
+('Placa Madera','Insumo de carpintería',2,500,3,2,1),
 ('Tornillo','Insumo general',1,0.60,1,1,1),
 ('Tuerca','Insumo general',1,0.40,1,3,1),
 ('Mesa','Mesa por m2',2,2000,4,4,1);
@@ -300,9 +314,9 @@ insert into tipo_factura values
 ('C','Emitida por monotributista');
 
 insert into cliente values 
-('PÃ©rez','Juan','351-1231292','30-72098763-6',default),
+('Pérez','Juan','351-1231292','30-72098763-6',default),
 ('Pito','Elsa','351-4921292','30-72093243-2',default),
-('Flores del Campo','ZacarÃ­as','351-1242292','30-62028421-6',default),
+('Flores del Campo','Zacarías','351-1242292','30-62028421-6',default),
 ('Lancha','Chin Chu','351-5124286','30-72839637-3',default);
 
 go
@@ -310,10 +324,9 @@ go
 insert into tipo_doc values
 ('DNI','Documento Nacional de Identidad'),
 ('LE','Libreta de Enrolamiento'),
-('CI','CÃ©dula de Identidad');
+('CI','Cédula de Identidad');
 
 insert into vendedor values 
 (1,36975628,convert(datetime,'16/02/1995',103),convert(datetime,'05/03/1975',103),'Gaona Lugo','Orlando','351-2852890'),
 (1,38976271,convert(datetime,'01/12/1988',103),convert(datetime,'15/02/1996',103),'Mac Allister','Alexis','351-8273615'),
 (2,29665267,convert(datetime,'11/11/1960',103),convert(datetime,'25/10/1980',103),'Andrada','Esteban','351-2773025');
-

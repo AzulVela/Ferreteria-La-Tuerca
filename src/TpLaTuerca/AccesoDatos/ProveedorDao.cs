@@ -25,9 +25,14 @@ namespace TpLaTuerca.AccesoDatos
 
             return listaProveedor;
         }
-
+        //private int TiempoEntregaInt(DataRow data)
+        //{
+        //    int time;
+        //    return int.TryParse(data["TiempoDeEntrega"].ToString(), out time) ? time : 0;
+        //}
         private Proveedor ObjectMapping(DataRow dataRow)
         {
+            int time2;
             Proveedor oProveedor = new Proveedor
             {
                 CodProveedor = Convert.ToInt32(dataRow["CodProveedor"].ToString()),
@@ -35,7 +40,8 @@ namespace TpLaTuerca.AccesoDatos
                 Nombre = dataRow["Nombre"].ToString(),
                 Direccion = dataRow["Direccion"].ToString(),
                 Telefono = dataRow["Telefono"].ToString(),
-                //TiempoEntrega = Convert.ToInt32(dataRow["TiempoDeEntrega"].ToString()),
+                
+                TiempoEntrega = int.TryParse(dataRow["TiempoDeEntrega"].ToString(), out time2) ? time2 : 0,
             };
 
             return oProveedor;

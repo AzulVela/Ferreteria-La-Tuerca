@@ -47,10 +47,10 @@ namespace TpLaTuerca.Presentación.Proveedor
             if (!chkTodos.Checked)
             {
                 if (txtNombre.Text != string.Empty)
-                    filtros.Add("Nombre",'%'+txtNombre.Text+'%');
+                    filtros.Add("Nombre", txtNombre.Text+'%');
 
                 if (txtApellido.Text != string.Empty)
-                    filtros.Add("Apellido",'%'+txtApellido.Text+'%');
+                    filtros.Add("Apellido", txtApellido.Text+'%');
 
                 if (filtros.Count > 0)
                     dgvProveedores.DataSource = oProveedorService.ConsultarConFiltros(filtros);
@@ -113,7 +113,6 @@ namespace TpLaTuerca.Presentación.Proveedor
 
         private void DgvProveedores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnNuevo.Enabled = true;
             btnActualizar.Enabled = true;
             btnEliminar.Enabled = true;
         }

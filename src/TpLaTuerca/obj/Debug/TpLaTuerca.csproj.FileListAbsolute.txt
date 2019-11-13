@@ -116,4 +116,29 @@ C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA-PROYECTO\Ferr
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA-PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.exe
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA-PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.pdb
 C:\Users\Ernesto\Desktop\PAVVV\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Factura.frmFactura.resources
+<<<<<<< HEAD
 C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Factura.frmBusquedaProducto.resources
+=======
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentación.Clientes.frmABMCliente.resources
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentación.Cliente.frmClientes.resources
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Factura.frmFactura.resources
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.frmPrincipal.resources
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentación.Login.frmLogin.resources
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Productos.frmDetalleProducto.resources
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Productos.frmProductos.resources
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentación.Proveedor.frmABMProveedor.resources
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentación.Proveedor.frmProveedores.resources
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Usuarios.frmABMUsuario.resources
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Usuarios.frmUsuarios.resources
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Properties.Resources.resources
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.csproj.GenerateResource.cache
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.csproj.CoreCompileInputs.cache
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.exe
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.pdb
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\bin\Debug\TpLaTuerca.exe.config
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\bin\Debug\TpLaTuerca.exe
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\bin\Debug\TpLaTuerca.pdb
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Factura.frmListaProductos.resources
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Cuenta_Corriente.frmCuentaCorriente.resources
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Cuenta_Corriente.frmListaClientes.resources
+>>>>>>> 339bf3fefbe84d461ccb2f30ca48f9291dc7131f

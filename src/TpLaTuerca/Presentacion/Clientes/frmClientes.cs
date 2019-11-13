@@ -51,12 +51,12 @@ namespace TpLaTuerca.Presentación.Cliente
             {
                 if (txtNombre.Text != string.Empty)
                 {
-                    filtros.Add("Nombre", '%'+txtNombre.Text+'%');
+                    filtros.Add("Nombre", txtNombre.Text+'%');
                 }
 
                 if (txtApellido.Text != string.Empty)
                 {
-                    filtros.Add("Apellido", '%'+txtApellido.Text+'%');
+                    filtros.Add("Apellido", txtApellido.Text+'%');
                 }
 
                 if (filtros.Count > 0)
@@ -105,14 +105,8 @@ namespace TpLaTuerca.Presentación.Cliente
 
         private void DgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnNuevo.Enabled = true;
             btnActualizar.Enabled = true;
             btnEliminar.Enabled = true;
-        }
-
-        private void DgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void InitializeDataGridView()
@@ -136,11 +130,6 @@ namespace TpLaTuerca.Presentación.Cliente
 
             dgvClientes.Columns[4].Name = "CUIT";
             dgvClientes.Columns[4].DataPropertyName = "CUIT";
-        }
-
-        private void TxtNombre_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

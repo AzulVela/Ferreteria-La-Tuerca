@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos\ClienteDao.cs" />
+    <Compile Include="AccesoDatos\CuentaCorrienteDao.cs" />
     <Compile Include="AccesoDatos\DataManager.cs" />
     <Compile Include="AccesoDatos\FacturaDao.cs" />
     <Compile Include="AccesoDatos\ProductoDao.cs" />
@@ -59,11 +60,13 @@
     <Compile Include="AccesoDatos\UsuarioDao.cs" />
     <Compile Include="AccesoDatos\VendedorDao.cs" />
     <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\CuentaCorriente.cs" />
     <Compile Include="Entidades\DetalleFactura.cs" />
     <Compile Include="Entidades\Estructura.cs" />
     <Compile Include="Entidades\Factura.cs" />
     <Compile Include="Entidades\Producto.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
+    <Compile Include="Entidades\ResumenCuentCte.cs" />
     <Compile Include="Entidades\TipoDoc.cs" />
     <Compile Include="Entidades\TipoFactura.cs" />
     <Compile Include="Entidades\TipoMedida.cs" />
@@ -71,6 +74,7 @@
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Entidades\Vendedor.cs" />
     <Compile Include="LogicaNegocio\ClienteService.cs" />
+    <Compile Include="LogicaNegocio\CuentaCorrienteService.cs" />
     <Compile Include="LogicaNegocio\FacturaService.cs" />
     <Compile Include="LogicaNegocio\ProductoService.cs" />
     <Compile Include="LogicaNegocio\ProveedorService.cs" />
@@ -90,11 +94,25 @@
     <Compile Include="Presentacion\Clientes\frmClientes.designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Presentacion\Factura\frmBusquedaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\Factura\frmBusquedaProducto.Designer.cs">
       <DependentUpon>frmBusquedaProducto.cs</DependentUpon>
+=======
+    <Compile Include="Presentacion\Cuenta_Corriente\frmCuentaCorriente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Cuenta_Corriente\frmCuentaCorriente.Designer.cs">
+      <DependentUpon>frmCuentaCorriente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Cuenta_Corriente\frmListaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Cuenta_Corriente\frmListaClientes.Designer.cs">
+      <DependentUpon>frmListaClientes.cs</DependentUpon>
+>>>>>>> 339bf3fefbe84d461ccb2f30ca48f9291dc7131f
     </Compile>
     <Compile Include="Presentacion\Factura\frmFactura.cs">
       <SubType>Form</SubType>
@@ -103,6 +121,12 @@
       <DependentUpon>frmFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="LogicaNegocio\TipoFacturaService.cs" />
+    <Compile Include="Presentacion\Factura\frmListaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Factura\frmListaProductos.Designer.cs">
+      <DependentUpon>frmListaProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,11 +183,22 @@
     <EmbeddedResource Include="Presentacion\Clientes\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Presentacion\Factura\frmBusquedaProducto.resx">
       <DependentUpon>frmBusquedaProducto.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Presentacion\Cuenta_Corriente\frmCuentaCorriente.resx">
+      <DependentUpon>frmCuentaCorriente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Cuenta_Corriente\frmListaClientes.resx">
+      <DependentUpon>frmListaClientes.cs</DependentUpon>
+>>>>>>> 339bf3fefbe84d461ccb2f30ca48f9291dc7131f
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Factura\frmFactura.resx">
       <DependentUpon>frmFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Factura\frmListaProductos.resx">
+      <DependentUpon>frmListaProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
@@ -232,6 +267,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_person_people_6100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondox_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

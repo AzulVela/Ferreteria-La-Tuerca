@@ -31,7 +31,7 @@ namespace TpLaTuerca.Presentacion.Usuarios
                 if (txtNombre.Text != string.Empty)
                 {
                     List<Usuario> usuario = new List<Usuario>();
-                    usuario.Add(oUsuarioService.ObtenerUsuario('%'+txtNombre.Text+'%'));
+                    usuario.Add(oUsuarioService.ObtenerUsuario(txtNombre.Text+'%'));
                     dgvUsuarios.DataSource = usuario;
                 }
 
@@ -95,7 +95,6 @@ namespace TpLaTuerca.Presentacion.Usuarios
 
         private void DgvUsuarios_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            btnNuevo.Enabled = true;
             btnActualizar.Enabled = true;
             btnEliminar.Enabled = true;
         }

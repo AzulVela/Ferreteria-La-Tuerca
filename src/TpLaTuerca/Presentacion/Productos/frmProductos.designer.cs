@@ -47,44 +47,43 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(346, 418);
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(728, 418);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 38);
+            this.btnSalir.Size = new System.Drawing.Size(55, 45);
             this.btnSalir.TabIndex = 10;
-            this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Enabled = false;
-            this.btnEliminar.Location = new System.Drawing.Point(182, 418);
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.Location = new System.Drawing.Point(142, 418);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 38);
+            this.btnEliminar.Size = new System.Drawing.Size(55, 45);
             this.btnEliminar.TabIndex = 9;
-            this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnActualizar
             // 
             this.btnActualizar.Enabled = false;
-            this.btnActualizar.Location = new System.Drawing.Point(101, 418);
+            this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
+            this.btnActualizar.Location = new System.Drawing.Point(81, 418);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 38);
+            this.btnActualizar.Size = new System.Drawing.Size(55, 45);
             this.btnActualizar.TabIndex = 8;
-            this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Enabled = false;
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.Location = new System.Drawing.Point(20, 418);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 38);
+            this.btnNuevo.Size = new System.Drawing.Size(55, 45);
             this.btnNuevo.TabIndex = 6;
-            this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseMnemonic = false;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
@@ -100,7 +99,7 @@
             this.groupBox1.Controls.Add(this.dgvProductos);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(422, 392);
+            this.groupBox1.Size = new System.Drawing.Size(780, 400);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar";
@@ -108,7 +107,7 @@
             // chkTodos
             // 
             this.chkTodos.AutoSize = true;
-            this.chkTodos.Location = new System.Drawing.Point(120, 92);
+            this.chkTodos.Location = new System.Drawing.Point(120, 101);
             this.chkTodos.Margin = new System.Windows.Forms.Padding(2);
             this.chkTodos.Name = "chkTodos";
             this.chkTodos.Size = new System.Drawing.Size(56, 17);
@@ -120,7 +119,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 57);
+            this.label4.Location = new System.Drawing.Point(42, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 14;
@@ -129,18 +128,18 @@
             // cboTipoUso
             // 
             this.cboTipoUso.FormattingEnabled = true;
-            this.cboTipoUso.Location = new System.Drawing.Point(120, 57);
+            this.cboTipoUso.Location = new System.Drawing.Point(120, 68);
             this.cboTipoUso.Name = "cboTipoUso";
-            this.cboTipoUso.Size = new System.Drawing.Size(193, 21);
+            this.cboTipoUso.Size = new System.Drawing.Size(238, 21);
             this.cboTipoUso.TabIndex = 1;
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(334, 99);
+            this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
+            this.btnConsultar.Location = new System.Drawing.Point(716, 82);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultar.Size = new System.Drawing.Size(55, 41);
             this.btnConsultar.TabIndex = 4;
-            this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.BtnConsultar_Click);
             // 
@@ -158,7 +157,7 @@
             // 
             this.txtCodigo.Location = new System.Drawing.Point(120, 33);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(69, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(94, 20);
             this.txtCodigo.TabIndex = 0;
             // 
             // dgvProductos
@@ -166,11 +165,11 @@
             this.dgvProductos.AllowUserToAddRows = false;
             this.dgvProductos.AllowUserToDeleteRows = false;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(6, 142);
+            this.dgvProductos.Location = new System.Drawing.Point(8, 132);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 62;
-            this.dgvProductos.Size = new System.Drawing.Size(405, 244);
+            this.dgvProductos.Size = new System.Drawing.Size(765, 262);
             this.dgvProductos.TabIndex = 5;
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProductos_CellClick);
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProductos_CellContentClick);
@@ -179,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 468);
+            this.ClientSize = new System.Drawing.Size(804, 471);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);

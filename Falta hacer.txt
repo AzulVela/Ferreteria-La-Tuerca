@@ -1,0 +1,11 @@
+Falta:
+-Redondear el importe
+-Tiempo de entrega de Proveedor arreglar. No se muestra
+-Ver que en la factura los pesos son euros
+-Tabs en factura, le pinta cualquiera
+-Enter en el boton ACEPTAR de lista producto
+-Enter en el boton ACEPTAR de lista cliente
+-Centrar Formularios
+-Mensajes cuando no existe el cliente o el producto o las otras cosas que se buscan
+-Solucionar que al pagar una cuenta de X cliente, se actualice el dgv sin que aparezca el listado de Clientes
+-Reportes

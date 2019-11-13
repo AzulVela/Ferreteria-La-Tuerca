@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmABMUsuario));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.Label4 = new System.Windows.Forms.Label();
@@ -42,7 +43,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(212, 159);
+            this.btnCancelar.Location = new System.Drawing.Point(238, 159);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 23);
             this.btnCancelar.TabIndex = 34;
@@ -52,7 +53,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(128, 159);
+            this.btnAceptar.Location = new System.Drawing.Point(154, 159);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(78, 23);
             this.btnAceptar.TabIndex = 33;
@@ -145,8 +146,9 @@
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.txtNombre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmABMUsuario";
-            this.Text = "frmABMUsuarios";
+            this.Text = "ABMUsuarios";
             this.Load += new System.EventHandler(this.FrmABMUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

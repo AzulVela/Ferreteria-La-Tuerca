@@ -16,18 +16,11 @@ namespace TpLaTuerca.Presentación.Login
         private readonly UsuarioService usuarioService;
 
         public string UsuarioLogueado { get; internal set; }
-        frmPrincipal frmPrincipal;
 
-        public frmLogin(frmPrincipal _frmPrincipal)
+        public frmLogin()
         {
             InitializeComponent();
             usuarioService = new UsuarioService();
-            frmPrincipal = _frmPrincipal;
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -52,7 +45,10 @@ namespace TpLaTuerca.Presentación.Login
             {
                 // Login OK
                 UsuarioLogueado = usr.NombreUsuario;
-                this.Close();
+
+                frmPrincipal principal = new frmPrincipal();
+                principal.ShowDialog();
+                Close();
             }
             else
             {
@@ -72,12 +68,7 @@ namespace TpLaTuerca.Presentación.Login
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -85,22 +76,6 @@ namespace TpLaTuerca.Presentación.Login
             lblfecha.Text ="Fecha: " + DateTime.Now.ToShortDateString();
             lblhora.Text = "Hora: " + DateTime.Now.ToString("HH:mm");
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtContraseña_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
         //Al presionar enter en la caja de usuario baja hacia la contraseña
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
@@ -112,7 +87,6 @@ namespace TpLaTuerca.Presentación.Login
                 SendKeys.Send("{TAB}");
             }
         }
-        
 
         //Al presionar enter en la caja de contraseña selecciona ingresar
         private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
@@ -123,6 +97,7 @@ namespace TpLaTuerca.Presentación.Login
             }
         }
 
+<<<<<<< HEAD
         private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             
@@ -132,5 +107,14 @@ namespace TpLaTuerca.Presentación.Login
         {
 
         }
+=======
+        //private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    DialogResult rpta;
+        //    rpta = MessageBox.Show("¿Seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        //    if (rpta == DialogResult.No)
+        //        e.Cancel = true;
+        //}
+>>>>>>> 339bf3fefbe84d461ccb2f30ca48f9291dc7131f
     }
 }

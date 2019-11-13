@@ -18,15 +18,11 @@ public class DataManager
     }
 
     public object ConsultaSQLScalar(string strSql)
-
     {
-
         SqlCommand cmd = new SqlCommand();
 
         try
-
         {
-
             cmd.Connection = dbConnection;
 
             cmd.Transaction = dbTransaction;
@@ -38,17 +34,13 @@ public class DataManager
             cmd.CommandText = strSql;
 
             return cmd.ExecuteScalar();
-
         }
 
         catch (SqlException ex)
 
         {
-
             throw (ex);
-
         }
-
     }
 
     public void BeginTransaction()
