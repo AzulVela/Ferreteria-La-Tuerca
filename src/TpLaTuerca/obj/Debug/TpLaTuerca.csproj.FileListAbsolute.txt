@@ -138,3 +138,4 @@ C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferr
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Factura.frmListaProductos.resources
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Cuenta_Corriente.frmCuentaCorriente.resources
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Cuenta_Corriente.frmListaClientes.resources
+C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.csprojAssemblyReference.cache
