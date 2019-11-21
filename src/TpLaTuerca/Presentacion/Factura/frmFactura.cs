@@ -190,6 +190,7 @@ namespace TpLaTuerca.Presentacion.Factura
                     cboCliente.SelectedIndex = -1;
                     cboVendedor.SelectedIndex = -1;
                    // cboProducto.SelectedIndex = -1;
+                    lstDetalles.Clear();
 
                     dgvDetalle.DataSource = null;
                 }

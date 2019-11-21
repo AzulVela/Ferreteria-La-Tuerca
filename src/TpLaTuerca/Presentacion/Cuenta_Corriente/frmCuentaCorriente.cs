@@ -42,12 +42,12 @@ namespace TpLaTuerca.Presentacion.Cuenta_Corriente
 
                 if (txtNombre.Text != string.Empty)
                 {
-                    filtros.Add("Nombre", txtNombre.Text + '%');
+                    filtros.Add("Nombre", '%' + txtNombre.Text + '%');
                 }
 
                 if (txtApellido.Text != string.Empty)
                 {
-                    filtros.Add("Apellido", txtApellido.Text + '%');
+                    filtros.Add("Apellido", '%' + txtApellido.Text + '%');
                 }
 
 
@@ -72,7 +72,7 @@ namespace TpLaTuerca.Presentacion.Cuenta_Corriente
 
         private void FrmCuentaCorriente_Load(object sender, EventArgs e)
         {
-
+            this.CenterToParent();
         }
 
         internal void TomarCliente()

@@ -189,6 +189,17 @@ public class DataManager
         return rtdo;
     }
 
+
+    internal DataTable GenerarReporte()
+    {
+        string sql = string.Concat("select Cliente.Apellido,Cliente.Nombre, SUM(Detalle_Factura.Cantidad*Detalle_Factura.Precio) as 'Saldo' ",
+                                  "from Cliente join Factura on Cliente.CodCliente = Factura.CodCliente join Detalle_Factura on ",
+                                  "(Factura.CodTipoFactura = Detalle_Factura.CodTipoFactura and Factura.NroFactura = Detalle_Factura.NroFactura) ",
+                                  "group by Cliente.Apellido,Cliente.Nombre");
+
+        return ConsultaSQL(sql);
+                                                             
+    }
 }
 
 

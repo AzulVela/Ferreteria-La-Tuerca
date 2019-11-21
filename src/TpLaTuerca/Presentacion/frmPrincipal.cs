@@ -14,6 +14,7 @@ using TpLaTuerca.Presentación.Login;
 using TpLaTuerca.Presentacion.Usuarios;
 using TpLaTuerca.Presentacion.Factura;
 using TpLaTuerca.Presentacion.Cuenta_Corriente;
+using TpLaTuerca.Presentacion.Reportes;
 
 namespace TpLaTuerca
 {
@@ -89,6 +90,12 @@ namespace TpLaTuerca
         {
             frmCuentaCorriente cuenta = new frmCuentaCorriente();
             cuenta.ShowDialog();
+        }
+
+        private void cuentaCorrienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReporteCtaCte rep = new ReporteCtaCte();
+            rep.ShowDialog();
         }
     }
 }

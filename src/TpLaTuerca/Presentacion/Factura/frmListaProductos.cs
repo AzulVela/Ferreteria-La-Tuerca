@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TpLaTuerca.Entidades;
 using TpLaTuerca.LogicaNegocio;
-using TpLaTuerca.Entidades;
 
 namespace TpLaTuerca.Presentacion.Factura
 {
@@ -50,7 +49,7 @@ namespace TpLaTuerca.Presentacion.Factura
         internal void CargarProductos(string nombre)
         {
             var filtros = new Dictionary<string, object>();
-            filtros.Add("Nombre", nombre + '%');
+            filtros.Add("Nombre", '%' + nombre + '%');
 
             dgvListaProductos.DataSource = oProductoService.ConsultarConFiltro(filtros);
         }

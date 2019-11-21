@@ -1,3 +1,6 @@
+create database tp_latuerca;
+go
+
 USE [Tp_LaTuerca]
 GO
 /****** Object:  Table [dbo].[Cliente]    Script Date: 12-Sep-19 18:09:44 ******/
