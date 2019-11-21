@@ -116,6 +116,9 @@ C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA-PROYECTO\Ferr
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA-PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.exe
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA-PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.pdb
 C:\Users\Ernesto\Desktop\PAVVV\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Factura.frmFactura.resources
+<<<<<<< HEAD
+C:\Users\sebad\Documents\Facu\PAV\TP\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Factura.frmBusquedaProducto.resources
+=======
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentación.Clientes.frmABMCliente.resources
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentación.Cliente.frmClientes.resources
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Factura.frmFactura.resources
@@ -138,6 +141,7 @@ C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferr
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Factura.frmListaProductos.resources
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Cuenta_Corriente.frmCuentaCorriente.resources
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Cuenta_Corriente.frmListaClientes.resources
+<<<<<<< HEAD
 C:\Users\Azul Vela\Documents\Facultad\Tercer año\PAV I\FERRETERIA_PROYECTO\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.csprojAssemblyReference.cache
 C:\Users\sebad\Desktop\Ferreteria-La-Tuerca\src\TpLaTuerca\bin\Debug\TpLaTuerca.exe.config
 C:\Users\sebad\Desktop\Ferreteria-La-Tuerca\src\TpLaTuerca\bin\Debug\TpLaTuerca.exe
@@ -191,3 +195,6 @@ G:\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.csproj.GenerateResou
 G:\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\TpLaTuerca.Presentacion.Reportes.ReporteCtaCte.resources
 G:\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\RdlCompile.cache
 G:\Ferreteria-La-Tuerca\src\TpLaTuerca\obj\Debug\RdlCompile.compiled
+=======
+>>>>>>> 339bf3fefbe84d461ccb2f30ca48f9291dc7131f
+>>>>>>> fa830671a8cb293f7e64ae1c0505aa2cc5913984

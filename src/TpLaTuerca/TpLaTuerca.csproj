@@ -100,6 +100,13 @@
     <Compile Include="Presentacion\Clientes\frmClientes.designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="Presentacion\Factura\frmBusquedaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Factura\frmBusquedaProducto.Designer.cs">
+      <DependentUpon>frmBusquedaProducto.cs</DependentUpon>
+=======
     <Compile Include="Presentacion\Cuenta_Corriente\frmCuentaCorriente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +118,7 @@
     </Compile>
     <Compile Include="Presentacion\Cuenta_Corriente\frmListaClientes.Designer.cs">
       <DependentUpon>frmListaClientes.cs</DependentUpon>
+>>>>>>> 339bf3fefbe84d461ccb2f30ca48f9291dc7131f
     </Compile>
     <Compile Include="Presentacion\Factura\frmFactura.cs">
       <SubType>Form</SubType>
@@ -197,11 +205,16 @@
     <EmbeddedResource Include="Presentacion\Clientes\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Presentacion\Factura\frmBusquedaProducto.resx">
+      <DependentUpon>frmBusquedaProducto.cs</DependentUpon>
+=======
     <EmbeddedResource Include="Presentacion\Cuenta_Corriente\frmCuentaCorriente.resx">
       <DependentUpon>frmCuentaCorriente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Cuenta_Corriente\frmListaClientes.resx">
       <DependentUpon>frmListaClientes.cs</DependentUpon>
+>>>>>>> 339bf3fefbe84d461ccb2f30ca48f9291dc7131f
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Factura\frmFactura.resx">
       <DependentUpon>frmFactura.cs</DependentUpon>

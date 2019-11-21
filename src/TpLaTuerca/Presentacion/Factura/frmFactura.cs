@@ -207,6 +207,12 @@ namespace TpLaTuerca.Presentacion.Factura
 
         }
 
+<<<<<<< HEAD
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBusquedaProducto frm = new frmBusquedaProducto();
+            frm.ShowDialog();
+=======
         private void RadioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -232,6 +238,7 @@ namespace TpLaTuerca.Presentacion.Factura
                     lista.ShowDialog();
                 }
             }
+>>>>>>> 339bf3fefbe84d461ccb2f30ca48f9291dc7131f
         }
     }
 }

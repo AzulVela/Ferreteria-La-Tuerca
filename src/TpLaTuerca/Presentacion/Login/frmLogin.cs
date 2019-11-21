@@ -97,6 +97,17 @@ namespace TpLaTuerca.Presentación.Login
             }
         }
 
+<<<<<<< HEAD
+        private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+        }
+
+        private void btnIngresar_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+=======
         //private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
         //{
         //    DialogResult rpta;
@@ -104,5 +115,6 @@ namespace TpLaTuerca.Presentación.Login
         //    if (rpta == DialogResult.No)
         //        e.Cancel = true;
         //}
+>>>>>>> 339bf3fefbe84d461ccb2f30ca48f9291dc7131f
     }
 }
